@@ -1,0 +1,11 @@
+@use '../styles/partials/colors' as *;
+@use '../styles/partials/variables' as *;
+
+.SearchBox{
+    background-color: $colSecondary-Albaster;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: $colSecondary-Mercury;
+    height:36px;
+    width:100%;
+}

@@ -3,6 +3,9 @@ import './Avatar.scss'
 
 export default function SiteLogo(){
     return(
-        <img className="Avatar" src={avatar} alt='Avatar'/>
+        <div className="Avatar">
+            <img className="Avatar__img" src={avatar} alt='Avatar'/>
+        </div>
+        
     );
 }

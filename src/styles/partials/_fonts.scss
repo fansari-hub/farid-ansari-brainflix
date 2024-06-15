@@ -1,0 +1,61 @@
+@use 'colors' as *;
+
+@font-face{
+    font-family: 'Avenir';
+    src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format('openType');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Avenir-Bold';
+    src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format('openType');
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Avenir-Demi';
+    src: url("../../assets/Font//AvenirNextLTPro-Demi.otf") format('openType');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.font-PageHeader{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Avenir-Bold';
+    font-weight: bolder;
+}
+
+.font-Header{
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Avenir';
+    font-weight: bolder;
+}
+
+
+.font-Subheader{
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'Avenir-Bold';
+    font-weight: bolder;
+}
+
+.font-Body{
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'Avenir';
+    font-weight: normal;
+}
+
+.font-Label{
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Avenir-Bold';
+    font-weight: bolder;
+}
+
+.font-Faded{
+    color: $colPrimary-Silver;
+}

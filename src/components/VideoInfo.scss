@@ -1,0 +1,15 @@
+@use '../styles/partials/variables' as *;
+
+.VideoInfo{
+    padding-left: $pad-mobile;
+    padding-right: $pad-mobile;
+    &__details{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: $pad-between-mobile;
+        &__item{
+            text-align: left;
+        }
+    }
+    
+}

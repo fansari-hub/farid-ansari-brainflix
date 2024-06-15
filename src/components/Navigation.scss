@@ -1,0 +1,27 @@
+@use '../styles/partials/colors' as *;
+@use '../styles/partials/variables' as *;
+
+.Navigation{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: $pad-mobile;
+    margin-right: $pad-mobile;
+    margin-top: $pad-between-mobile;
+    margin-bottom: $pad-between-mobile;
+    row-gap: $pad-mobile;
+    &__logo{
+        min-width: 320px;
+    }
+    &__search{
+        min-width: 240px;
+        min-height: 36px;
+        padding-right: 12px;
+    }
+    &__avatar{
+        background-color: none;
+    }
+    &__upload{
+        flex-grow: 1;
+    }
+    
+}

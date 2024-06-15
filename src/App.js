@@ -1,8 +1,6 @@
 import "./App.scss";
-import SearchBox from "./components/SearchBox";
-import SiteLogo from "./components/SiteLogo";
-import Avatar from "./components/Avatar";
-import Button from "./components/Button";
+
+import Navigation from "./components/Navigation";
 import VideoPlayer from "./components/VideoPlayer";
 import VideoTitle from "./components/VideoTitle";
 import VideoInfo from "./components/VideoInfo";
@@ -14,14 +12,7 @@ import CommentCounter from "./components/CommentCounter";
 function App() {
   return (
     <div className="App">
-      <SiteLogo/>
-      <div>
-        <SearchBox/>
-        <Avatar/> 
-      </div>
-      <div>
-        <Button label="UPLOAD"/>
-      </div>
+      <Navigation/>
       <div>
         <VideoPlayer/>
       </div>
@@ -32,7 +23,7 @@ function App() {
         <VideoInfo author="Aiden Thompson" views={980544} videoDate="8/8/2023" likes={22479}/>
       </div>
       <div>
-        <TextBlock text="BLABLABLABLABLA"/>
+        <TextBlock text="Explore the cutting-edge developments and predictions for Artificial Intelligence in the coming years. From revolutionary breakthroughs in machine learning to the ethical considerations influencing AI advancements, this exploration transcends the boundaries of mere speculation. Join us on a journey that navigates the intricate interplay between innovation, ethics, and the ever-evolving tech frontier."/>
       </div>
       <div>
         <CommentCounter counter={3}/>

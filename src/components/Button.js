@@ -1,7 +1,9 @@
+import "./Button.scss"
+
 export default function Button(prop){
 
     const {label} = prop;
     return (
-        <button>{label}</button>
+        <button className="Button">{label}</button>
     );
 }

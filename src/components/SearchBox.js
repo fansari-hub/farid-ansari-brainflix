@@ -1,5 +1,6 @@
+import "./SearchBox.scss"
 export default function SearchBox(){
     return(
-        <input type="text" value="search"></input>
+        <input className="SearchBox" type="text" value="Search"></input>
     );
 }

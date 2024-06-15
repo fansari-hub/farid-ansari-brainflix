@@ -1,4 +1,9 @@
+@use './styles//partials/fonts' as *;
+@use './styles//partials/global' as *;
+@use './styles//partials/variables' as *;
+
+
 .App {
     text-align: center;
     width : 320px;
-  }
+    }

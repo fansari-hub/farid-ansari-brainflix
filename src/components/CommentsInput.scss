@@ -1,0 +1,38 @@
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/colors' as *;
+
+.CommentsInput{
+    margin-left: $pad-mobile;
+    margin-right: $pad-mobile;
+    display: flex;
+    gap: $pad-mobile;
+    &__avatar{
+        background-color: none;
+        padding-top: 20px;
+    }
+    &__input{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        &__title{
+            padding: 0px;
+            margin: 0px;
+            text-align: left;
+        }
+        &__textbox{
+            background-color: $colSecondary-Albaster;
+            border-radius: 4px;
+            border-width: 1px;
+            border-color: $colSecondary-Mercury;
+            height:100px;
+            width:100%;
+
+        }
+        &__button{
+            margin-top: $pad-mobile;
+            margin-bottom: $pad-mobile;
+            flex-grow: 1;
+        }
+    }
+}

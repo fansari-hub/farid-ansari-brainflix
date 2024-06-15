@@ -1,6 +1,7 @@
+import "./TextBlock.scss"
 export default function TextBlock(prop){
     const {text} = prop
     return (
-        <p>{text}</p>
+        <p className="TextBlock font-Body">{text}</p>
     );
 }
