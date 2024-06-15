@@ -1,0 +1,7 @@
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/colors' as *;
+
+.CommentsList{
+    margin-left: $pad-mobile;
+    margin-right: $pad-mobile;
+}

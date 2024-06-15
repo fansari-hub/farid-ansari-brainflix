@@ -4,7 +4,7 @@ import VideoInfo from "./VideoInfo"
 import TextBlock from "./TextBlock"
 import CommentInput from "./CommentInput";
 import CommentCounter from "./CommentCounter";
-import CommentsOutput from "./CommentsOutput";
+import CommentsList from "./CommentsList";
 import videoData from "../data/video-details.json";
 
 
@@ -30,7 +30,7 @@ export default function VideoExplorer(props) {
         <CommentInput/>
       </div>
       <div>
-        <CommentsOutput comments={videoData[index].comments}/>
+        <CommentsList comments={videoData[index].comments}/>
       </div>
     </>
   );
