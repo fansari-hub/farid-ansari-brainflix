@@ -1,8 +1,8 @@
-import currentVideo from "../assets/Images/Upload-video-preview.jpg"
 import './VideoPlayer.scss'
 
-export default function VideoPlayer(){
+export default function VideoPlayer(props){
+    const {image} = props;
     return (
-    <img className="VideoPlayer" src={currentVideo} alt='Video Player'/>
+    <img className="VideoPlayer" src={image} alt='Video Player'/>
     );
 }
