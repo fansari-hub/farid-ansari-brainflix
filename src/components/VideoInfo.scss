@@ -9,6 +9,9 @@
       @include displayTablet {
         display: none;
       }
+      @include displayDesktop {
+        display: none;
+      }
     }
   }
   &__details {
@@ -24,6 +27,10 @@
       flex-direction: column;
       gap: 10px;
       @include displayTablet {
+        flex-direction: row;
+        gap: $pad-tablet;
+      }
+      @include displayDesktop {
         flex-direction: row;
         gap: $pad-tablet;
       }

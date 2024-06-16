@@ -1,0 +1,39 @@
+@use "../styles/partials/mixins" as *;
+
+.VideoExplorer{
+    &__videoPlayer{
+        background-color: none;
+    }
+    &__cont{
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        @include displayDesktop{
+            flex-direction: row;
+        }
+        &__meta{
+            @include displayDesktop{
+                flex-shrink: 2;
+            }
+            &__videoTitle{
+                background-color: none;
+            }
+            &__videoInfo{
+                background-color: none;
+            }
+            &__textBlock{
+                background-color: none;
+            }
+            &__commentInput{
+                background-color: none;
+            }
+            &__commentList{
+                background-color: none;
+            }
+        }
+        &__videoList{
+            background-color: none;
+            width: fit-content;
+        }
+    }
+}

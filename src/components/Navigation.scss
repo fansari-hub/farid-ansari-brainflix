@@ -1,9 +1,11 @@
 @use '../styles/partials/colors' as *;
 @use '../styles/partials/variables' as *;
+@use "../styles/partials/mixins" as *;
 
 .Navigation{
     display: flex;
     flex-wrap: wrap;
+    justify-content:flex-end;
     margin-left: $pad-mobile;
     margin-right: $pad-mobile;
     margin-top: $pad-between-mobile;
@@ -11,19 +13,45 @@
     row-gap: $pad-mobile;
     column-gap: $pad-mobile;
     &__logo{
-        min-width: 320px;
+        background-color: none;
+        width: 100%;
+        @include displayTablet{
+            width: auto;
+            margin-right: auto;
+            margin-left: 50px;
+        }
+        @include displayDesktop{
+            width: auto;
+            margin-right: auto;
+            margin-left: 50px;
+        }
     }
     &__search{
         min-width: 240px;
         min-height: 36px;
+        margin-right: 32px;
         flex-grow: 1;
-        padding-right: 12px;
+        @include displayTablet{
+            flex-grow: 0;
+        }
+        @include displayDesktop{
+            flex-grow: 0;
+        }
     }
     &__avatar{
         background-color: none;
     }
     &__upload{
-        flex-grow: 1;
+        width: 100%;
+        order: 9;
+        @include displayTablet{
+            width: auto;
+            margin-right: 50px;
+        }
+        @include displayDesktop{
+            width: auto;
+            margin-right: 50px;
+        }
     }
     
 }

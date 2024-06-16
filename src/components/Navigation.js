@@ -13,11 +13,11 @@ export default function Navigation() {
       <div className="Navigation__search">
         <SearchBox />
       </div>
-      <div className="Navigation__avatar">
-        <Avatar />
-      </div>
       <div className="Navigation__upload">
         <Button label="UPLOAD" iconType={1} />
+      </div>
+      <div className="Navigation__avatar">
+        <Avatar />
       </div>
     </div>
   );
