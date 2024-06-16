@@ -19,11 +19,11 @@ export default function VideoInfo(prop) {
         </div>
         <div className="VideoInfo__details__col">
           <div className="VideoInfo__details__col__group">
-            <img src={iViews} />
+            <img src={iViews} alt="views" />
             <p className="VideoInfo__details__col__group__item font-Body font-Faded">{views}</p>
           </div>
           <div className="VideoInfo__details__col__group">
-            <img src={iLikes} />
+            <img src={iLikes} alt="likes" />
             <p className="VideoInfo__details__col__group__item font-Body font-Faded">{likes}</p>
           </div>
         </div>
