@@ -1,9 +1,22 @@
-@use './styles//partials/fonts' as *;
-@use './styles//partials/global' as *;
-@use './styles//partials/variables' as *;
-
+@use "./styles//partials/fonts" as *;
+@use "./styles//partials/global" as *;
+@use "./styles//partials/variables" as *;
+@use "./styles//partials/mixins" as *;
 
 .App {
-    text-align: center;
-    //width : 360px;
+  text-align: center;
+  &__mainContent {
+    display: flex;
+    flex-wrap: wrap;
+    @include displayDesktop {
+      flex-wrap: nowrap;
+      &__videoExplorer {
+        background-color: none;
+        width : 1280px;
+      }
+      &__videoList {
+        background-color: none;
+      }
     }
+  }
+}
