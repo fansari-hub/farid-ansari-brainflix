@@ -6,11 +6,23 @@ $breakpoint-mobile-s: 0px;
 $breakpoint-mobile-e: 767px;
 
 
-$pad-mobile: 16px;
-$gut-mobile: 16px;
-$pad-before-mobile: 24px;
-$pad-after-mobile: 16px;
-$pad-between-mobile: 16px;
+$pad-mobile-before-head: 24px;
+$pad-mobile-after-head: 16px;
+$pad-mobile-between-component: 16px;
+
+$pad-before-head: 36px;
+$pad-after-head: 24px;
+$pad-between-component: 24px;
 
 
-$pad-tablet: 24px;
+
+$pad-1: 4px;
+$pad-2: 8px;
+$pad-3: 16px;
+$pad-4: 24px;
+$pad-5: 32px;
+$pad-6: 40px;
+$pad-7: 48px;
+$pad-8: 56px;
+$pad-9: 64px;
+$pad-10: 90px;

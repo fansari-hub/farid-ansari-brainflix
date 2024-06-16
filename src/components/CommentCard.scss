@@ -1,12 +1,21 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/colors" as *;
+@use "../styles/partials/mixins" as *;
 
 .CommentsCard {
   display: flex;
-  gap: $pad-mobile;
+  gap: $pad-3;
+  margin-left: $pad-3;
+  margin-right: $pad-3;
+  padding-top: $pad-2;
+  @include displayTablet{
+    padding-top: $pad-3;
+  }
+  @include displayDesktop{
+    padding-top: $pad-3;
+  }
   &__avatar {
     background-color: none;
-    padding-top: 20px;
   }
   &__output {
     flex-grow: 1;

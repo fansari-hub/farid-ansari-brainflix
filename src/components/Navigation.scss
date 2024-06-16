@@ -6,30 +6,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content:flex-end;
-    margin-left: $pad-mobile;
-    margin-right: $pad-mobile;
-    margin-top: $pad-between-mobile;
-    margin-bottom: $pad-between-mobile;
-    row-gap: $pad-mobile;
-    column-gap: $pad-mobile;
+    margin: $pad-3;
+    row-gap: $pad-3;
+    column-gap: $pad-3;
     &__logo{
         background-color: none;
         width: 100%;
         @include displayTablet{
             width: auto;
             margin-right: auto;
-            margin-left: 50px;
+            margin-left: $pad-5;
         }
         @include displayDesktop{
             width: auto;
             margin-right: auto;
-            margin-left: 50px;
+            margin-left: $pad-5;
         }
     }
     &__search{
-        min-width: 240px;
-        min-height: 36px;
-        margin-right: 32px;
+        margin-right: $pad-6;
         flex-grow: 1;
         @include displayTablet{
             flex-grow: 0;
@@ -46,11 +41,13 @@
         order: 9;
         @include displayTablet{
             width: auto;
-            margin-right: 50px;
+            margin-right: $pad-7;
+            order:unset;
         }
         @include displayDesktop{
             width: auto;
-            margin-right: 50px;
+            margin-right: $pad-7;
+            order:unset;
         }
     }
     

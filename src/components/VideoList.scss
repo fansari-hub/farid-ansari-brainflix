@@ -1,7 +1,9 @@
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
 .VideoList{
     text-align: left;
-    margin-left: $pad-mobile;
-    margin-right: $pad-mobile;
+    margin-left: $pad-3;
+    margin-right: $pad-3;
+    background-color: none;
 }

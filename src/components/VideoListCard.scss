@@ -1,13 +1,18 @@
 @use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
 .VideoListCard{
     margin: 0px;
-    padding-top: 12px;
-    padding-left: $pad-mobile;
-    padding-right: $pad-mobile;
+    padding-top: $pad-2;
     display: flex;
     align-content:flex-start;
     background-color: none;
+    @include displayTablet{
+        padding-top: $pad-4;
+    }
+    @include displayDesktop{
+        padding-top: $pad-3;
+    }
     &__thumb{
         width: 100px;
         border-radius: 4px;
@@ -17,8 +22,8 @@
         flex-direction: column;
         justify-content: space-between;
         text-align: left;
-        padding-left: $pad-mobile;
-        padding-right: $pad-mobile;
+        padding-left: $pad-3;
+        padding-right: $pad-3;
         &__text{
             margin: 0px;
             padding: 0px;

@@ -1,19 +1,29 @@
 @use "../styles/partials/mixins" as *;
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/colors" as *;
 
 .VideoExplorer{
     &__videoPlayer{
-        background-color: none;
+        background-color: black;
     }
     &__cont{
         display: flex;
         flex-direction: column;
         background-color: none;
+        margin-bottom: 5%;
         @include displayDesktop{
             flex-direction: row;
         }
         &__meta{
+            @include displayTablet{
+                margin-left: $pad-4;
+                margin-right: $pad-4;
+            }
             @include displayDesktop{
-                flex-shrink: 2;
+                margin-left: 10%;
+                margin-right: 0px;
+                max-width: 720px;
+                border-right: 1px solid $colSecondary-Mercury;
             }
             &__videoTitle{
                 background-color: none;
@@ -34,6 +44,7 @@
         &__videoList{
             background-color: none;
             width: fit-content;
+            //margin-right: 10%;
         }
     }
 }

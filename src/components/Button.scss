@@ -1,5 +1,6 @@
 @use '../styles/partials/colors' as *;
 @use '../styles/partials/variables' as *;
+@use "../styles/partials/mixins" as *;
 
 .Button{
     width: 100%;
@@ -11,6 +12,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include displayTablet{
+        min-width: 150px;
+        padding-left: $pad-5;
+        padding-right: $pad-5;
+
+    }
+    @include displayDesktop{
+        min-width: 150px;
+        padding-left: $pad-5;
+        padding-right: $pad-5;
+    }
 
     &__icon{
         padding-top: 5px;
