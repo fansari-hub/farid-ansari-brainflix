@@ -9,12 +9,14 @@
     margin-top: $pad-between-mobile;
     margin-bottom: $pad-between-mobile;
     row-gap: $pad-mobile;
+    column-gap: $pad-mobile;
     &__logo{
         min-width: 320px;
     }
     &__search{
         min-width: 240px;
         min-height: 36px;
+        flex-grow: 1;
         padding-right: 12px;
     }
     &__avatar{

@@ -1,0 +1,7 @@
+@use '../styles/partials/variables' as *;
+
+.VideoList{
+    text-align: left;
+    margin-left: $pad-mobile;
+    margin-right: $pad-mobile;
+}

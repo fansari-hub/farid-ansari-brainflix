@@ -17,7 +17,7 @@ export default function Navigation() {
         <Avatar />
       </div>
       <div className="Navigation__upload">
-        <Button label="UPLOAD" />
+        <Button label="UPLOAD" iconType={1} />
       </div>
     </div>
   );

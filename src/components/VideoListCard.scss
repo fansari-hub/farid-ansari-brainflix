@@ -1,0 +1,27 @@
+@use '../styles/partials/variables' as *;
+
+.VideoListCard{
+    margin: 0px;
+    padding-top: 12px;
+    padding-left: $pad-mobile;
+    padding-right: $pad-mobile;
+    display: flex;
+    align-content:flex-start;
+    background-color: none;
+    &__thumb{
+        width: 100px;
+        border-radius: 4px;
+    }
+    &__details{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: left;
+        padding-left: $pad-mobile;
+        padding-right: $pad-mobile;
+        &__text{
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+}
