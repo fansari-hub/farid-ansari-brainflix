@@ -25,6 +25,7 @@
     line-height: 32px;
     font-family: 'Avenir-Bold';
     font-weight: bolder;
+    color: $colPrimary-Black;
 }
 
 .font-Header{
@@ -32,6 +33,7 @@
     line-height: 20px;
     font-family: 'Avenir';
     font-weight: bolder;
+    color: $colPrimary-Black;
 }
 
 
@@ -40,6 +42,7 @@
     line-height: 18px;
     font-family: 'Avenir-Bold';
     font-weight: bolder;
+    color: $colPrimary-Black;
 }
 
 .font-Body{
@@ -47,6 +50,7 @@
     line-height: 18px;
     font-family: 'Avenir';
     font-weight: normal;
+    color: $colPrimary-Black;
 }
 
 .font-Label{
@@ -54,6 +58,15 @@
     line-height: 20px;
     font-family: 'Avenir-Bold';
     font-weight: bolder;
+    color: $colPrimary-Black;
+}
+
+.font-Button{
+    font-size: 12px;
+    line-height: 20px;
+    font-family: 'Avenir-Bold';
+    font-weight: bolder;
+    color: $colPrimary-White;
 }
 
 .font-Faded{

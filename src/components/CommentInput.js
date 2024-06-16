@@ -10,8 +10,8 @@ export default function CommentInput() {
       </div>
       <div className="CommentsInput__right">
             <div className="CommentsInput__right__container">
-                <p className="CommentsInput__right__container__title font-Faded font-Label">JOIN THE CONVERSATION!</p>
-                <input className="CommentsInput__right__container__textbox" type="text" placeholder="Add a new Comment!"/>
+                <label className="CommentsInput__right__container__title font-Faded font-Label">JOIN THE CONVERSATION</label>
+                <textarea className="CommentsInput__right__container__textbox" placeholder="Add a new comment!"/>
             </div>
             <div className="CommentsInput__right__button">
                 <Button label="COMMENT" iconType={0} />

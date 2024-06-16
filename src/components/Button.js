@@ -10,7 +10,7 @@ export default function Button(prop){
     return (
         <button className="Button">
             <div className="Button__icon"><img className="Button__icon__image" alt="icon" src={icons[iconType]}/></div>
-            <div className="Button__label"><p className="font-Label">{label}</p></div>
+            <div className="Button__label"><p className="font-Button">{label}</p></div>
             
         </button>
     );

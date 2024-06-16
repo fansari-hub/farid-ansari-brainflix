@@ -7,6 +7,9 @@
     display: flex;
     align-content:flex-start;
     background-color: none;
+    &:hover{
+        cursor:pointer;
+    }
     @include displayTablet{
         padding-top: $pad-4;
     }

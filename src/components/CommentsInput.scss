@@ -6,6 +6,7 @@
   margin-left: $pad-3;
   margin-right: $pad-3;
   display: flex;
+  background-color: none;
   gap: $pad-3;
   &__avatar {
     background-color: none;
@@ -27,10 +28,11 @@
     &__container {
         background-color: none;
         flex-grow: 1;
+        text-align: left;
       &__title {
         padding: 0px;
         margin: 0px;
-        text-align: left;
+        background-color: none;
       }
       &__textbox {
         background-color: $colSecondary-Albaster;
@@ -39,12 +41,12 @@
         border-color: $colSecondary-Mercury;
         height: 100px;
         width: 100%;
-        padding: 10px;
+        padding: $pad-2;
         @include displayTablet {
-          height: 25px;
+          height: 40px;
         }
         @include displayDesktop{
-          height: 25px;
+          height: 40px;
       }
       }
     }
