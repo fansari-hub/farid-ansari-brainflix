@@ -1,29 +1,42 @@
-@use '../styles/partials/variables' as *;
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
 
-.VideoInfo{
-    padding-left: $pad-mobile;
-    padding-right: $pad-mobile;
-    &__details{
-        padding-top: 10px;
-        padding-bottom: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        background-color: none;
-        column-gap: $pad-between-mobile;
-        &__col{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            &__group{
-                display: flex;
-                column-gap: $pad-mobile;
-                background-color: none;
-                &__item{
-                    text-align: left;
-                    margin: 0px;
-                    background-color: none
-                }
-            }
-        }
+.VideoInfo {
+  padding-left: $pad-mobile;
+  padding-right: $pad-mobile;
+  &__ruler {
+    &--tablet {
+      @include displayTablet {
+        display: none;
+      }
     }
+  }
+  &__details {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: none;
+    column-gap: $pad-between-mobile;
+    justify-content: space-between;
+    &__col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      @include displayTablet {
+        flex-direction: row;
+        gap: $pad-tablet;
+      }
+      &__group {
+        display: flex;
+        column-gap: $pad-mobile;
+        background-color: none;
+        &__item {
+          text-align: left;
+          margin: 0px;
+          background-color: none;
+        }
+      }
+    }
+  }
 }
