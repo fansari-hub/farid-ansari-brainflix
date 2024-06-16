@@ -15,7 +15,7 @@ export default function VideoExplorer() {
   let [selectedVideo, setSelectedVideo] = useState(0);
 
   const videoClickHandler = (videoId) => {
-    console.log(videoId);
+    //console.log(videoId);
     let x = videoListData.findIndex((obj) => {
       return obj.id === videoId;
     });

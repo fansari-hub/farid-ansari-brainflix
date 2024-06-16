@@ -15,6 +15,7 @@ export default function VideoInfo(prop) {
           </div>
           <div className="VideoInfo__details__col__group">
             <p className="VideoInfo__details__col__group__item font-Body font-Faded">{utils.getRelativeTime(videoDate)}</p>
+            {/* <p className="VideoInfo__details__col__group__item font-Body font-Faded">{Intl.DateTimeFormat("en-US", {weekday: "short", month: "short", day: "2-digit", year: "numeric", timeZone: "America/Los_Angeles",}).format(videoDate)}</p> */}
           </div>
         </div>
         <div className="VideoInfo__details__col">

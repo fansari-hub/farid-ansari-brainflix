@@ -20,7 +20,7 @@ const utils = {
       let HOUR_MS = 60 * MINUTE_MS;
       let DAY_MS = 24 * HOUR_MS;
       let WEEK_MS = 7 * DAY_MS;
-      let MONTH_MS = 30 * DAY_MS;
+      let MONTH_MS = 30.4368645 * DAY_MS;
       let YEAR_MS = 12 * MONTH_MS;
   
       let lookup = {
@@ -65,13 +65,18 @@ const utils = {
           // get plural time unit name
           prettyTime += val + " " + lookup.plural[i];
         }
-  
+        // console.log(lookup.singular[i] + ":" + lookup.values[i]);
+        // console.log(lookup.singular[i+1] + ":" + lookup.values[i+1]);
+        // console.log('--------------');
         // This block allows the appending of the next lower time unit if relevant conditions are met by allowing the loop to contine one more time
-        if (lookup.values[i] - Math.floor(lookup.values[i]) > 0 && Math.floor(lookup.values[i + 1] > 0) && lookup.maxValues[i + 1] !== Math.floor(lookup.values[i + 1]) && terminate === false) {
-          prettyTime += " and ";
-          terminate = true;
-          continue;
-        }
+        if (lookup.values[i] - Math.floor(lookup.values[i]) > 0 //check to see if there are any time remainders
+            && Math.floor(lookup.values[i + 1] > 0)  //check to see if next lower unit has any time 
+            && (lookup.maxValues[i + 1] - Math.floor(lookup.values[i + 1]) > -1)  //check to see if we are at the max of our unit for the remainders, leave a little widdle room since are dividers are not exact
+            && terminate === false) {
+              prettyTime += " and ";
+              terminate = true;
+              continue;
+            }
         break;
       }
   
