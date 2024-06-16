@@ -1,7 +1,7 @@
 import "./VideoList.scss";
 import VideoListCard from "./VideoListCard";
 
-export default function VideoList({ list }) {
+export default function VideoList({ list, clickHandler }) {
   return (
     <div>
       <div className="VideoList">
@@ -9,7 +9,7 @@ export default function VideoList({ list }) {
       </div>
       <div>
         {list.map((i) => (
-          <VideoListCard videoItem={i}/>
+          <VideoListCard videoItem={i} clickHandler={clickHandler} key={i.id}/>
         ))}
       </div>
     </div>

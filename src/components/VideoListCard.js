@@ -1,8 +1,9 @@
 import "./VideoListCard.scss"
 
-export default function({videoItem}){
+export default function(props){
+    const {videoItem, clickHandler} = props
     return (
-        <div className="VideoListCard">
+        <div className="VideoListCard" onClick={() => clickHandler(videoItem.id)}>
             <div>
                 <img className="VideoListCard__thumb" src={videoItem.image}/>
             </div>

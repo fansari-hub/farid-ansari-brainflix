@@ -7,7 +7,7 @@ export default function CommentsList(props) {
     <div className="CommentsList">
       <hr />
       {props.comments.map((i) => (
-       <CommentCard name={i.name} comment={i.comment} timestamp={i.timestamp}/>
+       <CommentCard name={i.name} comment={i.comment} timestamp={i.timestamp} key={i.id}/>
       ))}
     </div>
   );
