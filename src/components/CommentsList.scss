@@ -1,9 +1,7 @@
-@use '../styles/partials/variables' as *;
-@use '../styles/partials/colors' as *;
-@use '../styles/partials/mixins' as *;
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/colors" as *;
+@use "../styles/partials/mixins" as *;
 
-.CommentsList{
-    background-color: none;   
-    //margin-left: $pad-3;
-    //margin-right: $pad-3;
+.CommentsList {
+  background-color: none;
 }

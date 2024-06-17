@@ -1,134 +1,121 @@
-@use 'colors' as *;
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "colors" as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 // Animations in Use for this project
 
-@keyframes buttonHover{
-
-    100%{
-        transform:  translate(0px, 0px)
-                    scale(1.05,1.05);
-        
-    }
+@keyframes buttonHover {
+  100% {
+    transform: translate(0px, 0px) scale(1.05, 1.05);
+  }
 }
 
-@keyframes iconHover{
-
-    100%{
-        transform:  translate(0px, 0px)
-                    scale(1.5,1.5);
-        filter:invert(1);
-    }
+@keyframes iconHover {
+  100% {
+    transform: translate(0px, 0px) scale(1.5, 1.5);
+    filter: invert(1);
+  }
 }
 
-@keyframes actionIconHover{
-
-    100%{
-        filter:invert(1);        
-        filter: drop-shadow(0px 0px 1px black);
-        transform:  translate(0px, 0px)
-        scale(1.1,1.1);
-    }
+@keyframes actionIconHover {
+  100% {
+    filter: invert(1);
+    filter: drop-shadow(0px 0px 1px black);
+    transform: translate(0px, 0px) scale(1.1, 1.1);
+  }
 }
 
-
-@keyframes fadeIn{
-    0%{
-        filter: opacity(0%);
-    }
-    100%{
-        filter: opacity(100%);
-    }
+@keyframes fadeIn {
+  0% {
+    filter: opacity(0%);
+  }
+  100% {
+    filter: opacity(100%);
+  }
 }
 
-
-
-@keyframes cardHover{
-    0%{
-        filter: brightness(1.5);
-    }
-    100%{
-        transform:  translate(0px, 0px)
-                    scale(1.05,1.05);
-        filter:brightness(1);
-    }
+@keyframes cardHover {
+  0% {
+    filter: brightness(1.5);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1.05, 1.05);
+    filter: brightness(1);
+  }
 }
 
-@keyframes reveal-side{
-    from {
-		opacity: 0;
-		//clip-path: inset(50% 10% 50% 10%);
-        transform: translate(-75%, 0px);
-
-	}
-	to {
-		opacity: 1;
-		//clip-path: inset(0% 0% 0% 0%);
-        transform: translate(0px, 0px);
-	}
+@keyframes reveal-side {
+  from {
+    opacity: 0;
+    //clip-path: inset(50% 10% 50% 10%);
+    transform: translate(-75%, 0px);
+  }
+  to {
+    opacity: 1;
+    //clip-path: inset(0% 0% 0% 0%);
+    transform: translate(0px, 0px);
+  }
 }
 
-@keyframes reveal-up{
-    from {
-		opacity: 0;
-		//clip-path: inset(50% 10% 50% 10%);
-        transform: translate(0px, 30%);
-
-	}
-	to {
-		opacity: 1;
-		//clip-path: inset(0% 0% 0% 0%);
-        transform: translate(0px, 0px);
-	}
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    //clip-path: inset(50% 10% 50% 10%);
+    transform: translate(0px, 30%);
+  }
+  to {
+    opacity: 1;
+    //clip-path: inset(0% 0% 0% 0%);
+    transform: translate(0px, 0px);
+  }
 }
 
-@mixin revealing-animation{
-    //Begin revealing-animation mixin
-    view-timeline-name: --revealing-element;
-    view-timeline-axis: block;
+@mixin revealing-animation {
+  //Begin revealing-animation mixin
+  view-timeline-name: --revealing-element;
+  view-timeline-axis: block;
 
-    @media (min-width: $breakpoint-desktop-s){
-        animation: linear reveal-up both;
-        animation-timeline: --revealing-element;
-        animation-range: entry 50% cover 40%;
-    }
+  @media (min-width: $breakpoint-desktop-s) {
+    animation: linear reveal-up both;
+    animation-timeline: --revealing-element;
+    animation-range: entry 50% cover 40%;
+  }
 
-    @media (min-width: $breakpoint-tablet-s) and (max-width: $breakpoint-tablet-e){
-        animation: linear reveal-side both;
-        animation-timeline: --revealing-element;
-        animation-range: entry 50% cover 25%;
-    }
-    
-    @media (min-width: $breakpoint-mobile-s) and (max-width:$breakpoint-mobile-e){
-        animation: linear reveal-side both;
-        animation-timeline: --revealing-element;
-        animation-range: entry 50% cover 25%;
-    }
-    //end revealing-animation mixin
+  @media (min-width: $breakpoint-tablet-s) and (max-width: $breakpoint-tablet-e) {
+    animation: linear reveal-side both;
+    animation-timeline: --revealing-element;
+    animation-range: entry 50% cover 25%;
+  }
+
+  @media (min-width: $breakpoint-mobile-s) and (max-width: $breakpoint-mobile-e) {
+    animation: linear reveal-side both;
+    animation-timeline: --revealing-element;
+    animation-range: entry 50% cover 25%;
+  }
+  //end revealing-animation mixin
 }
 
-@mixin revealing-animation-slideupOnly{
-    //Begin revealing-animation mixin
-    view-timeline-name: --revealing-element;
-    view-timeline-axis: block;
+@mixin revealing-animation-slideupOnly {
+  //Begin revealing-animation mixin
+  view-timeline-name: --revealing-element;
+  view-timeline-axis: block;
 
-    @media (min-width: $breakpoint-desktop-s){
-        animation: linear reveal-up both;
-        animation-timeline: --revealing-element;
-        animation-range: entry 50% cover 10%;
-    }
+  @media (min-width: $breakpoint-desktop-s) {
+    animation: linear reveal-up both;
+    animation-timeline: --revealing-element;
+    animation-range: entry 50% cover 10%;
+  }
 
-    @media (min-width: $breakpoint-tablet-s) and (max-width: $breakpoint-tablet-e){
-        animation: linear reveal-up both;
-        animation-timeline: --revealing-element;
-        animation-range: entry 50% cover 10%;
-    }
-    
-    @media (min-width: $breakpoint-mobile-s) and (max-width:$breakpoint-mobile-e){
-        animation: linear reveal-up both;
-        animation-timeline: --revealing-element;
-        animation-range: entry 50% cover 10%;
-    }
-    //end revealing-animation mixin
+  @media (min-width: $breakpoint-tablet-s) and (max-width: $breakpoint-tablet-e) {
+    animation: linear reveal-up both;
+    animation-timeline: --revealing-element;
+    animation-range: entry 50% cover 10%;
+  }
+
+  @media (min-width: $breakpoint-mobile-s) and (max-width: $breakpoint-mobile-e) {
+    animation: linear reveal-up both;
+    animation-timeline: --revealing-element;
+    animation-range: entry 50% cover 10%;
+  }
+  //end revealing-animation mixin
 }

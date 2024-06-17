@@ -17,18 +17,18 @@
     display: flex;
     flex-direction: column;
     background-color: none;
-    @include displayTablet{
-        flex-direction: row;
-        gap: $pad-4;
-    }
-    @include displayDesktop{
+    @include displayTablet {
       flex-direction: row;
       gap: $pad-4;
-  }
+    }
+    @include displayDesktop {
+      flex-direction: row;
+      gap: $pad-4;
+    }
     &__container {
-        background-color: none;
-        flex-grow: 1;
-        text-align: left;
+      background-color: none;
+      flex-grow: 1;
+      text-align: left;
       &__title {
         padding: 0px;
         margin: 0px;
@@ -45,9 +45,9 @@
         @include displayTablet {
           height: 40px;
         }
-        @include displayDesktop{
+        @include displayDesktop {
           height: 40px;
-      }
+        }
       }
     }
     &__button {

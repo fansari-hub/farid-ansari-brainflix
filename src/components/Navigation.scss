@@ -1,54 +1,52 @@
-@use '../styles/partials/colors' as *;
-@use '../styles/partials/variables' as *;
+@use "../styles/partials/colors" as *;
+@use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 
-.Navigation{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:flex-end;
-    margin: $pad-3;
-    row-gap: $pad-3;
-    column-gap: $pad-3;
-    &__logo{
-        background-color: none;
-        width: 100%;
-        @include displayTablet{
-            width: auto;
-            margin-right: auto;
-            margin-left: $pad-5;
-        }
-        @include displayDesktop{
-            width: auto;
-            margin-right: auto;
-            margin-left: $pad-5;
-        }
+.Navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: $pad-3;
+  row-gap: $pad-3;
+  column-gap: $pad-3;
+  &__logo {
+    background-color: none;
+    width: 100%;
+    @include displayTablet {
+      width: auto;
+      margin-right: auto;
+      margin-left: $pad-5;
     }
-    &__search{
-        //margin-right: $pad-6;
-        flex-grow: 1;
-        @include displayTablet{
-            flex-grow: 0;
-        }
-        @include displayDesktop{
-            flex-grow: 0;
-        }
+    @include displayDesktop {
+      width: auto;
+      margin-right: auto;
+      margin-left: $pad-5;
     }
-    &__avatar{
-        background-color: none;
+  }
+  &__search {
+    flex-grow: 1;
+    @include displayTablet {
+      flex-grow: 0;
     }
-    &__upload{
-        width: 100%;
-        order: 9;
-        @include displayTablet{
-            width: auto;
-            margin-right: $pad-7;
-            order:unset;
-        }
-        @include displayDesktop{
-            width: auto;
-            margin-right: $pad-7;
-            order:unset;
-        }
+    @include displayDesktop {
+      flex-grow: 0;
     }
-    
+  }
+  &__avatar {
+    background-color: none;
+  }
+  &__upload {
+    width: 100%;
+    order: 9;
+    @include displayTablet {
+      width: auto;
+      margin-right: $pad-7;
+      order: unset;
+    }
+    @include displayDesktop {
+      width: auto;
+      margin-right: $pad-7;
+      order: unset;
+    }
+  }
 }

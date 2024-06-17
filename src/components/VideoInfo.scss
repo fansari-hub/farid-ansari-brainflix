@@ -22,10 +22,10 @@
     background-color: none;
     column-gap: $pad-3;
     justify-content: flex-start;
-    @include displayTablet{
+    @include displayTablet {
       justify-content: space-between;
     }
-    @include displayDesktop{
+    @include displayDesktop {
       justify-content: space-between;
     }
     &__col {

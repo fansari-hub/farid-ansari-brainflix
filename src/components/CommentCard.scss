@@ -10,10 +10,10 @@
   margin-left: $pad-3;
   margin-right: $pad-3;
   padding-top: $pad-2;
-  @include displayTablet{
+  @include displayTablet {
     padding-top: $pad-3;
   }
-  @include displayDesktop{
+  @include displayDesktop {
     padding-top: $pad-3;
   }
   &__avatar {
@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     background-color: none;
-    &__header{
+    &__header {
       display: flex;
       justify-content: space-between;
       &__name {
@@ -36,7 +36,6 @@
         margin: 0px;
       }
     }
-    
     &__comment {
       background-color: none;
       text-align: left;
