@@ -6,7 +6,7 @@ export default function CommentInput() {
   return (
     <div className="CommentsInput">
       <div className="CommentsInput__avatar">
-        <Avatar />
+        <Avatar useDefault={true}/>
       </div>
       <div className="CommentsInput__right">
             <div className="CommentsInput__right__container">

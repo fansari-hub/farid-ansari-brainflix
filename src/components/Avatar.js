@@ -1,11 +1,13 @@
 import avatar from '../assets/Images/Mohan-muruge.jpg'
 import './Avatar.scss'
 
-export default function SiteLogo(){
+export default function Avatar(props){
+    let {image, useDefault} = props;
+
     return(
         <div className="Avatar">
-            <img className="Avatar__img" src={avatar} alt='Avatar'/>
-        </div>
-        
+            {image && <img className="Avatar__img" src={image} alt='Avatar'/>}
+            {!image && useDefault && <img className="Avatar__img" src={avatar} alt='Avatar'/>}
+        </div> 
     );
 }

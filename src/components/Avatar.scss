@@ -1,8 +1,11 @@
+@use "../styles/partials/colors" as *;
+
 .Avatar {
   overflow: hidden;
   border-radius: 50%;
   width: 36px;
   height: 36px;
+  background-color: $colPrimary-Silver;
   &__img {
     margin: 0 auto;
     margin-left: -15%;
