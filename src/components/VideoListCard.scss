@@ -1,7 +1,9 @@
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+@use "../styles/partials/anims" as *;
 
 .VideoListCard{
+    @include revealing-animation-slideupOnly;
     margin: 0px;
     padding-top: $pad-2;
     display: flex;
@@ -9,6 +11,9 @@
     background-color: none;
     &:hover{
         cursor:pointer;
+        animation: cardHover;
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards;
     }
     @include displayTablet{
         padding-top: $pad-4;

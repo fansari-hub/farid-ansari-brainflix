@@ -25,6 +25,9 @@
     &:hover{
         cursor:pointer;
         background-color: $colSecondary-DarkBlue;
+        animation: buttonHover;
+        animation-duration: 0.25s;
+        animation-fill-mode: forwards;
     }
 
     &__icon{
