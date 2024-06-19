@@ -6,12 +6,12 @@ import VideoExplorer from "./components/VideoExplorer";
 function App() {
   return (
     <div className="App">
-      <div className="App__navigation">
+      <nav className="App__navigation">
         <Navigation />
-      </div>
-      <div className="App__mainContent">
+      </nav>
+      <main className="App__mainContent">
         <VideoExplorer />
-      </div>
+      </main>
     </div>
   );
 }

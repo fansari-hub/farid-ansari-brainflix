@@ -33,23 +33,23 @@ export default function VideoExplorer() {
           <div className="VideoExplorer__cont__meta__videoTitle">
             <VideoTitle title={videoData[selectedVideo].title} />
           </div>
-          <div className="VideoExplorer__cont__meta__videoInfo">
+          <section className="VideoExplorer__cont__meta__videoInfo">
             <VideoInfo author={videoData[selectedVideo].channel} views={videoData[selectedVideo].views} videoDate={videoData[selectedVideo].timestamp} likes={videoData[selectedVideo].likes} />
-          </div>
-          <div className="VideoExplorer__cont__meta__textBlock">
+          </section>
+          <article className="VideoExplorer__cont__meta__textBlock">
             <TextBlock text={videoData[selectedVideo].description} />
-          </div>
-          <div className="VideoExplorer__cont__meta__commentInput">
+          </article>
+          <section className="VideoExplorer__cont__meta__commentInput">
             <CommentCounter counter={videoData[selectedVideo].comments.length} />
             <CommentInput />
-          </div>
-          <div className="VideoExplorer__cont__meta__commentList">
+          </section>
+          <section className="VideoExplorer__cont__meta__commentList">
             <CommentsList comments={videoData[selectedVideo].comments} />
-          </div>
+          </section>
         </div>
-        <div className="VideoExplorer__cont__videoList">
+        <section className="VideoExplorer__cont__videoList">
           <VideoList list={videoListData} clickHandler={videoClickHandler} selected={selectedVideo} />
-        </div>
+        </section>
       </div>
     </div>
   );
