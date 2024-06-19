@@ -12,7 +12,7 @@ export default function CommentCard(prop){
           </div>
           <div className="CommentsCard__output">
             <div className="CommentsCard__output__header">
-            <p className="CommentsCard__output__header__name font-Label">{name}</p>
+            <p className="CommentsCard__output__header__name font-WidgetTitle">{name}</p>
             <p className="CommentsCard__output__header__date font-Body font-Faded">{timestamp}</p>
             </div> 
             <p className="CommentsCard__output__comment font-Body">{comment}</p>

@@ -44,9 +44,13 @@
         padding: $pad-2;
         @include displayTablet {
           height: 40px;
+          padding: $pad-2;
+          padding-left: $pad-3;
         }
         @include displayDesktop {
           height: 40px;
+          padding: $pad-2;
+          padding-left: $pad-3;
         }
       }
     }

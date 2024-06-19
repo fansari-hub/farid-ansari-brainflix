@@ -5,7 +5,7 @@ export default function VideoList({ list, clickHandler, selected }) {
   return (
     
       <div className="VideoList">
-        <p className="font-Body font-Faded">NEXT VIDEOS</p>
+        <p className="font-Label font-Faded">NEXT VIDEOS</p>
       
       <div>
         {list
