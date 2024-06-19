@@ -1,6 +1,7 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/colors" as *;
 @use "../styles/partials/mixins" as *;
+@use "../styles/partials/functions" as *;
 
 .CommentsInput {
   margin-left: $pad-3;
@@ -39,16 +40,17 @@
         border-radius: 4px;
         border-width: 1px;
         border-color: $colSecondary-Mercury;
-        height: 100px;
+        height: toRem(100);
         width: 100%;
         padding: $pad-2;
+        resize: none;
         @include displayTablet {
-          height: 40px;
+          height: toRem(40);
           padding: $pad-2;
           padding-left: $pad-3;
         }
         @include displayDesktop {
-          height: 40px;
+          height: toRem(40);
           padding: $pad-2;
           padding-left: $pad-3;
         }
@@ -62,13 +64,13 @@
         flex-grow: 0;
         margin-top: $pad-4;
         margin-left: $pad-4;
-        min-width: 150px;
+        min-width: toRem(150);
       }
       @include displayDesktop {
         flex-grow: 0;
         margin-top: $pad-4;
         margin-left: $pad-4;
-        min-width: 150px;
+        min-width: toRem(150);
       }
     }
   }

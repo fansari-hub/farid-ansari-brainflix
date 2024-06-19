@@ -1,5 +1,6 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
+@use "../styles/partials/functions" as *;
 
 .VideoInfo {
   padding-left: $pad-3;
@@ -44,6 +45,9 @@
         display: flex;
         column-gap: $pad-3;
         background-color: none;
+        &__icon {
+          height: toRem(16);
+        }
         &__item {
           text-align: left;
           margin: 0px;

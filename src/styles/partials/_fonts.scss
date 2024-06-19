@@ -1,5 +1,7 @@
 @use "colors" as *;
 @use "mixins" as *;
+@use "variables" as *;
+@use "functions" as *;
 
 @font-face {
   font-family: 'Avenir';
@@ -27,118 +29,118 @@
 
 
 .font-PageHeader {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: toRem(24);
+  line-height: toRem(32);
   font-family: "Avenir";
   font-weight: 700;
   color: $colPrimary-Black;
   @include displayTablet{
-    font-size: 2.0625rem;
-    line-height: 2.75rem;
+    font-size: toRem(33);
+    line-height: toRem(44);
   }
   @include displayDesktop{
-    font-size: 2.0625rem;
-    line-height: 2.75rem;
+    font-size: toRem(33);
+    line-height: toRem(44);
   }
 }
 
 .font-Header {
-  font-size: 0.75rem;
-  line-height: 1.25rem;
+  font-size: toRem(12);
+  line-height: toRem(20);
   font-family: "Avenir";
   font-weight: 700;
   //color:blue;
   color: $colPrimary-Black;
   @include displayTablet{
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+    font-size: toRem(12);
+    line-height: toRem(20);
   }
   @include displayDesktop{
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+    font-size: toRem(12);
+    line-height: toRem(20);
   }
 }
 
 .font-Subheader {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: tomRem(13);
+  line-height: toRem(18);
   font-family: "Avenir";
   font-weight: 700;
   color: $colPrimary-Black;
   //color: orange;
   @include displayTablet{
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: toRem(14);
+    line-height: toRem(22);
   }
   @include displayDesktop{
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: toRem(14);
+    line-height: toRem(22);
   }
 }
 
 .font-WidgetTitle {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: toRem(13);
+  line-height: toRem(18);
   font-family: "Avenir";
   font-weight: 600;
   color: $colPrimary-Black;
   //color: red;
   @include displayTablet{
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: toRem(14);
+    line-height: toRem(22);
   }
   @include displayDesktop{
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: toRem(14);
+    line-height: toRem(22);
   }
 }
 
 .font-Body {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
+  font-size: toRem(13);
+  line-height: toRem(18);
   font-family: "Avenir";
   font-weight: 400;
   color: $colPrimary-Black;
   //color: green;
   @include displayTablet{
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: toRem(14);
+    line-height: toRem(22);
   }
   @include displayDesktop{
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: toRem(14);
+    line-height: toRem(22);
   }
 }
 
 .font-Label {
-  font-size: 0.75rem;
-  line-height: 1.25rem;
+  font-size: toRem(12);
+  line-height: toRem(20);
   font-family: "Avenir";
   font-weight: 600;
   color: $colPrimary-Black;
   @include displayTablet{
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+    font-size: toRem(12);
+    line-height: toRem(20);
   }
   @include displayDesktop{
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+    font-size: toRem(12);
+    line-height: toRem(20);
   }
 }
 
 .font-Button {
-  font-size: 0.75rem;
-  line-height: 1.25rem;
+  font-size: toRem(12);
+  line-height: toRem(20);
   font-family: "Avenir";
   font-weight: 600;
   color: $colPrimary-White;
   @include displayTablet{
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+    font-size: toRem(12);
+    line-height: toRem(20);
   }
   @include displayDesktop{
-    font-size: 0.75rem;
-    line-height: 1.25rem;
+    font-size: toRem(12);
+    line-height: toRem(20);
   }
 }
 

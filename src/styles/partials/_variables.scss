@@ -1,3 +1,5 @@
+@use "functions" as *;
+
 //display breakpoints
 $breakpoint-desktop-s: 1280px;
 $breakpoint-tablet-s: 768px;
@@ -6,23 +8,21 @@ $breakpoint-mobile-s: 0px;
 $breakpoint-mobile-e: 767px;
 
 
-$pad-mobile-before-head: 24px;
-$pad-mobile-after-head: 16px;
-$pad-mobile-between-component: 16px;
+$pad-mobile-before-head: toRem(24);
+$pad-mobile-after-head: toRem(16);
+$pad-mobile-between-component: toRem(16);
 
-$pad-before-head: 36px;
-$pad-after-head: 24px;
-$pad-between-component: 24px;
+$pad-before-head: toRem(36);
+$pad-after-head: toRem(24);
+$pad-between-component: toRem(24);
 
-
-
-$pad-1: 4px;
-$pad-2: 8px;
-$pad-3: 16px;
-$pad-4: 24px;
-$pad-5: 32px;
-$pad-6: 40px;
-$pad-7: 48px;
-$pad-8: 56px;
-$pad-9: 64px;
-$pad-10: 90px;
+$pad-1: toRem(4);
+$pad-2: toRem(8);
+$pad-3: toRem(16);
+$pad-4: toRem(24);
+$pad-5: toRem(32);
+$pad-6: toRem(40);
+$pad-7: toRem(48);
+$pad-8: toRem(56);
+$pad-9: toRem(64);
+$pad-10:toRem(90);

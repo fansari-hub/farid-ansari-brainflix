@@ -1,6 +1,7 @@
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/colors" as *;
+@use "../styles/partials/functions" as *;
 
 .VideoExplorer {
   &__videoPlayer {
@@ -22,7 +23,7 @@
       @include displayDesktop {
         margin-left: 10%;
         margin-right: 0px;
-        max-width: 720px;
+        max-width: toRem(720);
         border-right: 1px solid $colSecondary-Mercury;
       }
       &__videoTitle {

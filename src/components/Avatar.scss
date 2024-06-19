@@ -1,10 +1,11 @@
 @use "../styles/partials/colors" as *;
+@use "../styles/partials/functions" as *;
 
 .Avatar {
   overflow: hidden;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: toRem(36);
+  height: toRem(36);
   background-color: $colPrimary-Silver;
   &__img {
     margin: 0 auto;

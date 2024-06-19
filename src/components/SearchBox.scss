@@ -1,24 +1,26 @@
 @use "../styles/partials/colors" as *;
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
+@use "../styles/partials/functions" as *;
 
 .SearchBox {
   background-color: $colSecondary-Albaster;
   border-radius: 4px;
   border-width: 1px;
   border-color: $colSecondary-Mercury;
-  height: 36px;
+  height: toRem(36);
   width: 100%;
   padding-left: $pad-6;
   background-image: url("../assets/Icons/search.svg");
-  background-position: 10px 10px;
+  background-position: toRem(10) toRem(10);
+  background-size: toRem(16);
   background-repeat: no-repeat;
   @include displayTablet {
-    height: 40px;
+    height: toRem(40);
     padding-left: $pad-6;
   }
   @include displayDesktop {
-    height: 40px;
+    height: toRem(40);
     padding-left: $pad-6;
   }
 }
