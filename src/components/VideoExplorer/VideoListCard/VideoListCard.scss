@@ -1,0 +1,40 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/anims" as *;
+
+.VideoListCard {
+  @include revealing-animation-slideupOnly;
+  margin: 0px;
+  padding-top: $pad-2;
+  display: flex;
+  align-content: flex-start;
+  background-color: none;
+  &:hover {
+    cursor: pointer;
+    animation: cardHover;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+  }
+  @include displayTablet {
+    padding-top: $pad-4;
+  }
+  @include displayDesktop {
+    padding-top: $pad-3;
+  }
+  &__thumb {
+    width: 100px;
+    border-radius: 4px;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: $pad-3;
+    padding-right: $pad-3;
+    &__text {
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/functions" as *;
+
+.VideoInfo {
+  padding-left: $pad-3;
+  padding-right: $pad-3;
+  &__ruler {
+    &--tablet {
+      @include displayTablet {
+        display: none;
+      }
+      @include displayDesktop {
+        display: none;
+      }
+    }
+  }
+  &__details {
+    padding-top: $pad-2;
+    padding-bottom: $pad-2;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: none;
+    column-gap: $pad-3;
+    justify-content: flex-start;
+    @include displayTablet {
+      justify-content: space-between;
+    }
+    @include displayDesktop {
+      justify-content: space-between;
+    }
+    &__col {
+      display: flex;
+      flex-direction: column;
+      gap: $pad-2;
+      @include displayTablet {
+        flex-direction: row;
+        gap: $pad-4;
+      }
+      @include displayDesktop {
+        flex-direction: row;
+        gap: $pad-4;
+      }
+      &__group {
+        display: flex;
+        column-gap: $pad-3;
+        background-color: none;
+        &__icon {
+          height: toRem(16);
+        }
+        &__item {
+          text-align: left;
+          margin: 0px;
+          background-color: none;
+        }
+      }
+    }
+  }
+}

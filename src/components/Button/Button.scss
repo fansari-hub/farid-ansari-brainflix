@@ -1,0 +1,47 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/functions" as *;
+
+.Button {
+  width: 100%;
+  height: toRem(40);
+  border-radius: 4px;
+  border: 0px;
+  background-color: $colPrimary-Blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include displayTablet {
+    min-width: toRem(150);
+    padding-left: $pad-2;
+    padding-right: $pad-2;
+  }
+  @include displayDesktop {
+    min-width: toRem(150);
+    padding-left: $pad-2;
+    padding-right: $pad-2;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: $colSecondary-DarkBlue;
+    animation: buttonHover;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+  }
+  &__icon {
+    padding-top: 5px;
+    background-color: none;
+    margin: 0px;
+    &__image {
+      height: toRem(20);
+    }
+  }
+  &__label {
+    margin: 0px;
+    background-color: none;
+    padding-left: $pad-2;
+    padding-right: $pad-2;
+    flex-grow: 1;
+  }
+}

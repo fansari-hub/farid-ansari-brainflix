@@ -1,7 +1,7 @@
 import "./App.scss";
 
-import Navigation from "./components/Navigation";
-import VideoExplorer from "./components/VideoExplorer";
+import Navigation from "./components/Navigation/Navigation";
+import VideoExplorer from "./components/VideoExplorer/VideoExplorer";
 
 function App() {
   return (
