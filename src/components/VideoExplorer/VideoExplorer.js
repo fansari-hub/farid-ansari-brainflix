@@ -1,5 +1,5 @@
 import VideoPlayer from "./VideoPlayer/VideoPlayer";
-import VideoTitle from "./VideoTitle/VideoTitle";
+import GenericTitle from "../GenericTitle/GenericTitle";
 import VideoInfo from "./VideoInfo/VideoInfo";
 import TextBlock from "../TextBlock/TextBlock";
 import CommentInput from "../CommentsInput/CommentInput";
@@ -31,7 +31,7 @@ export default function VideoExplorer() {
       <div className="VideoExplorer__cont">
         <div className="VideoExplorer__cont__meta">
           <div className="VideoExplorer__cont__meta__videoTitle">
-            <VideoTitle title={videoData[selectedVideo].title} />
+            <GenericTitle title={videoData[selectedVideo].title} />
           </div>
           <section className="VideoExplorer__cont__meta__videoInfo">
             <VideoInfo author={videoData[selectedVideo].channel} views={videoData[selectedVideo].views} videoDate={videoData[selectedVideo].timestamp} likes={videoData[selectedVideo].likes} />

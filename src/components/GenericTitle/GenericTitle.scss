@@ -1,7 +1,7 @@
-@use "../../../styles/partials/variables" as *;
-@use "../../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
-.VideoTitle {
+.GenericTitle {
   text-align: left;
   margin: 0px;
   padding-left: $pad-3;

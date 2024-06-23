@@ -1,8 +1,8 @@
 import './Counter.scss'
 
-export default function CommentCounter(prop){
+export default function Counter(prop){
     const {title, counter} = prop
     return(
-        <p className='CommentCounter font-Label'>{counter} {title}</p>
+        <p className='Counter font-Label'>{counter} {title}</p>
     );
 }
