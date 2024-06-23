@@ -128,6 +128,24 @@
   }
 }
 
+.font-Label--counter {
+  font-size: toRem(13);
+  line-height: toRem(20);
+  font-family: "Avenir";
+  font-weight: 600;
+  color: $colPrimary-Black;
+  @include displayTablet{
+    font-size: toRem(14);
+    line-height: toRem(20);
+    font-weight: 700;
+  }
+  @include displayDesktop{
+    font-size: toRem(14);
+    line-height: toRem(20);
+    font-weight: 700;
+  }
+}
+
 .font-Button {
   font-size: toRem(12);
   line-height: toRem(20);

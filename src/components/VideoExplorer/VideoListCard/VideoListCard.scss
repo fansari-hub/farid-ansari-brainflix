@@ -1,6 +1,7 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
 @use "../../../styles/partials/anims" as *;
+@use "../../../styles/partials/functions" as *;
 
 .VideoListCard {
   @include revealing-animation-slideupOnly;
@@ -22,8 +23,14 @@
     padding-top: $pad-3;
   }
   &__thumb {
-    width: 100px;
+    width: toRem(100);
     border-radius: 4px;
+    @include displayTablet{
+      width: toRem(120);
+    }
+    @include displayDesktop{
+      width: toRem(120);
+    }
   }
   &__details {
     display: flex;

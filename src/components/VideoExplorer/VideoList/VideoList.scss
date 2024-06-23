@@ -1,15 +1,17 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/functions" as *;
 
 .VideoList {
   text-align: left;
   margin-left: $pad-3;
-  margin-right: $pad-3;
+  margin-right: $pad-2;
   background-color: none;
   @include displayTablet {
-    margin-right: $pad-9;
+    //margin-right: $pad-9;
+    max-width: toRem(330);
   }
   @include displayDesktop {
-    margin-right: $pad-9;
+    margin-right: $pad-10;
   }
 }

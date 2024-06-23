@@ -1,6 +1,7 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/functions" as *;
 
 .Navigation {
   display: flex;
@@ -20,20 +21,26 @@
     @include displayDesktop {
       width: auto;
       margin-right: auto;
-      margin-left: $pad-5;
+      margin-left: 110px;
     }
   }
   &__search {
     flex-grow: 1;
     @include displayTablet {
-      flex-grow: 0;
+      flex-grow: 1;
+      max-width: 225px;
     }
     @include displayDesktop {
-      flex-grow: 0;
+      flex-grow: 1;
+      max-width: 225px;
+      margin-right: $pad-2;
     }
   }
   &__avatar {
     background-color: none;
+    @include displayDesktop{
+      margin-right: 130px;
+    }
   }
   &__upload {
     width: 100%;
@@ -45,7 +52,7 @@
     }
     @include displayDesktop {
       width: auto;
-      margin-right: $pad-7;
+      margin-right: $pad-5;
       order: unset;
     }
   }

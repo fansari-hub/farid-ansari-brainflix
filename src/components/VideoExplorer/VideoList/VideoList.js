@@ -6,7 +6,6 @@ export default function VideoList({ list, clickHandler, selected }) {
     
       <div className="VideoList">
         <p className="font-Label font-Faded">NEXT VIDEOS</p>
-      
       <div>
         {list
           .filter((e, i) => i !== selected)

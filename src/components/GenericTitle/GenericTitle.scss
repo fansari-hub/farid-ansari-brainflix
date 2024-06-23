@@ -7,13 +7,13 @@
   padding-left: $pad-3;
   padding-right: $pad-3;
   padding-top: $pad-mobile-before-head;
-  padding-bottom: $pad-mobile-after-head;
+  //padding-bottom: $pad-mobile-after-head;
   @include displayTablet {
-    padding-top: $pad-before-head;
-    padding-bottom: $pad-after-head;
+    //padding-top: $pad-before-head;
+    //padding-bottom: $pad-after-head;
   }
   @include displayDesktop {
-    padding-top: $pad-before-head;
-    padding-bottom: $pad-after-head;
+    //padding-top: $pad-before-head;
+    //padding-bottom: $pad-after-head;
   }
 }

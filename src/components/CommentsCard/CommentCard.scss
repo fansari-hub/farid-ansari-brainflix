@@ -27,13 +27,16 @@
     &__header {
       display: flex;
       justify-content: space-between;
+      gap: $pad-1;
       &__name {
         padding: 0px;
         margin: 0px;
+        text-align: left;
       }
       &__date {
         padding: 0px;
         margin: 0px;
+        text-align: right;
       }
     }
     &__comment {

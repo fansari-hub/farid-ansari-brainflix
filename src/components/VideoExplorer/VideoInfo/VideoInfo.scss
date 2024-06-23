@@ -32,6 +32,7 @@
     &__col {
       display: flex;
       flex-direction: column;
+      background-color: none;
       gap: $pad-2;
       @include displayTablet {
         flex-direction: row;
@@ -47,6 +48,7 @@
         background-color: none;
         &__icon {
           height: toRem(16);
+          align-self: center;
         }
         &__item {
           text-align: left;
