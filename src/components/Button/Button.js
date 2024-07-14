@@ -9,7 +9,7 @@ export default function Button(prop) {
   const { label, iconType } = prop;
 
 
-  if (!iconType) {
+  if (iconType === undefined) {
     return (
       <button className="ButtonCancel">
         <div className="ButtonCancel__icon">
