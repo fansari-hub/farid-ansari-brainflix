@@ -1,0 +1,13 @@
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/functions" as *;
+
+
+.HomePage {
+  text-align: center;
+  margin: auto;
+
+  @include displayDesktop {
+    background-color: none;
+    max-width: toRem(1280);
+  }
+}

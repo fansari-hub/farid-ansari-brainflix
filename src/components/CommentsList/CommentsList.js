@@ -1,5 +1,5 @@
 import "./CommentsList.scss";
-import utils from "../../utils.js";
+import utils from "../../utils/utils.js";
 
 import CommentCard from "../CommentsCard/CommentCard.js";
 

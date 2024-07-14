@@ -1,18 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.scss";
 
-import Navigation from "./components/Navigation/Navigation";
-import VideoExplorer from "./components/VideoExplorer/VideoExplorer";
+import HomePage from "./pages/HomePage";
+import UploadPage from "./pages/UploadPage";
 
 function App() {
+
   return (
-    <div className="App">
-      <nav className="App__navigation">
-        <Navigation />
-      </nav>
-      <main className="App__mainContent">
-        <VideoExplorer />
-      </main>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage/>} />
+      <Route path="/video/:videoId" element={<HomePage/>} />
+      <Route path="/upload" element={<UploadPage/>} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 

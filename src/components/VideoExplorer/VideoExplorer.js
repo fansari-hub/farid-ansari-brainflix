@@ -9,10 +9,12 @@ import CommentsList from "../CommentsList/CommentsList";
 import VideoList from "./VideoList/VideoList";
 
 import { useState, useEffect } from "react";
-import webapi from "../../webapi.js";
+import webapi from "../../utils/webapi.js";
 import axios from "axios";
 
-export default function VideoExplorer() {
+export default function VideoExplorer(props) {
+  const { videoId } = props;
+
   let [selectedVideo, setSelectedVideo] = useState(null);
   let [videoListData, setVideoListData] = useState([]);
   let [videoData, setVideoData] = useState(null);
@@ -21,27 +23,19 @@ export default function VideoExplorer() {
     const fetchData = async () => {
       const response = await axios.get(webapi.URL + "/videos" + webapi.KEY);
       setVideoListData(response.data);
-      setSelectedVideo(response.data[0].id);
-      const response_video = await axios.get(webapi.URL + "/videos/" + response.data[0].id + webapi.KEY);
-      setVideoData(response_video.data);
-    };
-    fetchData();
-  }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      if (selectedVideo) {
-        const response = await axios.get(webapi.URL + "/videos/" + selectedVideo + webapi.KEY);
-        setVideoData(response.data);
+      if (videoId == undefined) {
+        setSelectedVideo(response.data[0].id);
+        const response_video = await axios.get(webapi.URL + "/videos/" + response.data[0].id + webapi.KEY);
+        setVideoData(response_video.data);
+      } else {
+        const response_video = await axios.get(webapi.URL + "/videos/" + videoId + webapi.KEY);
+        setVideoData(response_video.data);
       }
     };
     fetchData();
-  }, [selectedVideo]);
-
-  const videoClickHandler = (videoId) => {
-    setSelectedVideo(videoId);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  };
+  }, [videoId]);
 
   if (videoData) {
     return (
@@ -69,7 +63,7 @@ export default function VideoExplorer() {
             </section>
           </div>
           <section className="VideoExplorer__cont__videoList">
-            <VideoList list={videoListData} clickHandler={videoClickHandler} selected={selectedVideo} />
+            <VideoList list={videoListData} selected={selectedVideo} />
           </section>
         </div>
       </div>

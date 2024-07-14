@@ -1,9 +1,12 @@
 import "./VideoListCard.scss"
+import { Link } from "react-router-dom";
 
 export default function VideoListCard(props){
-    const {videoItem, clickHandler} = props
+    const {videoItem} = props;
+    const clickDestination = "/video/" + videoItem.id;
     return (
-        <div className="VideoListCard" onClick={() => clickHandler(videoItem.id)}>
+        <Link to={clickDestination}>
+        <div className="VideoListCard">
             <div>
                 <img className="VideoListCard__thumb" src={videoItem.image} alt="video thumbnail"/>
             </div>
@@ -12,5 +15,6 @@ export default function VideoListCard(props){
                 <p className="VideoListCard__details__text font-Body">{videoItem.channel}</p>
             </div>
         </div>
+        </Link>
     );
 }

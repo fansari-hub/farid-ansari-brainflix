@@ -1,5 +1,5 @@
 import "./VideoInfo.scss";
-import utils from "../../../utils.js";
+import utils from "../../../utils/utils.js";
 import iLikes from "../../../assets/Icons/likes.svg";
 import iViews from "../../../assets/Icons/views.svg";
 

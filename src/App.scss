@@ -1,16 +1,9 @@
 @use "./styles/partials/fonts" as *;
 @use "./styles/partials/global" as *;
-@use "./styles/partials/variables" as *;
-@use "./styles/partials/mixins" as *;
-@use "./styles/partials/functions" as *;
-
+//@use "./styles/partials/variables" as *;
+//@use "./styles/partials/mixins" as *;
+//@use "./styles/partials/functions" as *;
 
 .App {
-  text-align: center;
-  margin: auto;
-
-  @include displayDesktop {
-    background-color: none;
-    max-width: toRem(1280);
+  background-color: none;
   }
-}
