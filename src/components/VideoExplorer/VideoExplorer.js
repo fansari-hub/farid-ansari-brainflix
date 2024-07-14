@@ -24,7 +24,7 @@ export default function VideoExplorer(props) {
       const response = await axios.get(webapi.URL + "/videos" + webapi.KEY);
       setVideoListData(response.data);
 
-      if (videoId == undefined) {
+      if (videoId === undefined) {
         setSelectedVideo(response.data[0].id);
         const response_video = await axios.get(webapi.URL + "/videos/" + response.data[0].id + webapi.KEY);
         setVideoData(response_video.data);

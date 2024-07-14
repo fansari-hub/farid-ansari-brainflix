@@ -160,6 +160,9 @@
     font-size: toRem(12);
     line-height: toRem(20);
   }
+  &--alt{
+    color: $colPrimary-Blue;
+  }
 }
 
 .font-Faded {

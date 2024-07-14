@@ -45,3 +45,41 @@
     flex-grow: 1;
   }
 }
+
+.ButtonCancel{
+  width: 100%;
+  height: toRem(40);
+  border-radius: 4px;
+  border: 0px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include displayTablet {
+    min-width: toRem(150);
+    padding-left: $pad-2;
+    padding-right: $pad-2;
+  }
+  @include displayDesktop {
+    min-width: toRem(150);
+    padding-left: $pad-2;
+    padding-right: $pad-2;
+ 
+  }
+  &__icon {
+    padding-top: 5px;
+    background-color: none;
+    margin: 0px;
+    &__image {
+      height: toRem(20);
+      width: toRem(20);
+    }
+  }
+  &__label {
+    margin: 0px;
+    background-color: none;
+    padding-left: $pad-2;
+    padding-right: $pad-2;
+    flex-grow: 1;
+  }
+}
