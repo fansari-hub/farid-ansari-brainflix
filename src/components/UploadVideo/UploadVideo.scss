@@ -11,7 +11,6 @@
   background-color: none;
   gap: $pad-3;
   flex-grow: 1;
-  display: flex;
   flex-direction: column;
   background-color: none;
   @include displayTablet {
@@ -20,15 +19,36 @@
   }
   @include displayDesktop {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: $pad-4;
+  }
+  &__fieldgroup {
+    display: flex;
+    flex-direction: column;
+    @include displayTablet{
+      width: 100%;
+
+    }
+    @include displayDesktop{
+      width: toRem(900);
+    }
+    
   }
   &__container {
     background-color: none;
     flex-grow: 1;
     text-align: left;
+    display: flex;
+    flex-direction: column;
     &__preview {
       background-color: none;
       width: 100%;
+      @include displayTablet {
+        max-width: toRem(360);
+      }
+      @include displayDesktop {
+        max-width: toRem(320);
+      }
     }
     &__title {
       padding: 0px;
@@ -61,50 +81,81 @@
       height: toRem(100);
       width: 100%;
       padding: $pad-2;
-      
       resize: none;
       @include displayTablet {
-        height: toRem(40);
+        height: toRem(100);
         padding: $pad-2;
         padding-left: $pad-3;
       }
       @include displayDesktop {
-        height: toRem(40);
+        height: toRem(100);
         padding: $pad-2;
         padding-left: $pad-3;
       }
     }
   }
-  &__button {
-    margin-top: $pad-3;
-    flex-grow: 1;
+  &__buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+    
     @include displayTablet {
-      flex-grow: 0;
-      margin-top: $pad-4;
-      margin-left: $pad-4;
-      min-width: toRem(150);
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: flex-end;
     }
     @include displayDesktop {
-      flex-grow: 0;
-      margin-top: $pad-4;
-      margin-left: $pad-4;
-      min-width: toRem(150);
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: flex-end;
+      //justify-content: flex-end;
+    }
+    &__button {
+      margin-top: $pad-3;
+      flex-grow: 1;
+      @include displayTablet {
+        flex-grow: 0;
+        margin-top: $pad-4;
+        margin-left: $pad-4;
+        min-width: toRem(150);
+        order: 2;
+      }
+      @include displayDesktop {
+        flex-grow: 0;
+        margin-top: $pad-4;
+        margin-left: $pad-4;
+        min-width: toRem(150);
+        order: 2;
+      }
+    }
+    &__cancelbutton {
+      flex-grow: 1;
+      margin-bottom: $pad-3;
+      @include displayTablet {
+        flex-grow: 0;
+        margin-top: $pad-4;
+        margin-left: $pad-4;
+        min-width: toRem(150);
+      }
+      @include displayDesktop {
+        flex-grow: 0;
+        margin-top: $pad-4;
+        margin-left: $pad-4;
+        min-width: toRem(150);
+      }
     }
   }
-  &__cancelbutton {
-    flex-grow: 1;
-    margin-bottom: $pad-3;
+  &__ruler {
+    display: none;
     @include displayTablet {
-      flex-grow: 0;
       margin-top: $pad-4;
-      margin-left: $pad-4;
-      min-width: toRem(150);
+      width: 100%;
+      display: block;
     }
     @include displayDesktop {
-      flex-grow: 0;
       margin-top: $pad-4;
-      margin-left: $pad-4;
-      min-width: toRem(150);
+      width: 100%;
+      display: block;
     }
   }
 }

@@ -13,11 +13,13 @@
   align-items: center;
   justify-content: center;
   @include displayTablet {
+    width: auto;
     min-width: toRem(150);
     padding-left: $pad-2;
     padding-right: $pad-2;
   }
   @include displayDesktop {
+    width: auto;
     min-width: toRem(150);
     padding-left: $pad-2;
     padding-right: $pad-2;
@@ -56,11 +58,13 @@
   align-items: center;
   justify-content: center;
   @include displayTablet {
+    width: auto;
     min-width: toRem(150);
     padding-left: $pad-2;
     padding-right: $pad-2;
   }
   @include displayDesktop {
+    width: auto;
     min-width: toRem(150);
     padding-left: $pad-2;
     padding-right: $pad-2;
