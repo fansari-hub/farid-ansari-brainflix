@@ -1,6 +1,6 @@
 import Button from "../Button/Button";
 import videoThumb from "../../assets/Images/Upload-video-preview.jpg";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import "./UploadVideo.scss";
 
@@ -65,7 +65,10 @@ export default function UploadVideo() {
             <Button label="PUBLISH" iconType={2} buttonType="submit" disabled={!isFormValid()} />
           </div>
           <div className="UploadVideo__buttonsContainer__cancelbutton">
-            <Button label="CANCEL" />
+            <></>
+            <Link to="/">
+              <Button label="CANCEL" />
+            </Link>
           </div>
         </div>
       </form>

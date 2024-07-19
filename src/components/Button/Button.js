@@ -18,7 +18,7 @@ export default function Button(prop) {
 
   if (iconType === undefined) {
     return (
-      <button className="ButtonCancel" disabled={true}>
+      <button className="ButtonCancel" type="button" disabled={disabled}>
         <div className="ButtonCancel__icon">
           <div className="ButtonCancel__icon__image" />
         </div>
