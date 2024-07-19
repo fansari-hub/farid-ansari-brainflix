@@ -6,12 +6,19 @@ import iPublish from "../../assets/Icons/publish.svg";
 const icons = [iComment, iUpload, iPublish];
 
 export default function Button(prop) {
-  const { label, iconType } = prop;
+  const { label, iconType, buttonType, disabled } = prop;
+  let buttonClass = ""
+
+  if (disabled===true){
+    buttonClass="Button Button--disabled"
+  } else{
+    buttonClass="Button"
+  }
 
 
   if (iconType === undefined) {
     return (
-      <button className="ButtonCancel">
+      <button className="ButtonCancel" disabled={true}>
         <div className="ButtonCancel__icon">
           <div className="ButtonCancel__icon__image" />
         </div>
@@ -22,8 +29,8 @@ export default function Button(prop) {
     );
   } else {
     return (
-      <button className="Button">
-        <div className="Button__icon">
+      <button className={buttonClass} type={buttonType} disabled={disabled}>
+        <div className="Button__icon" >
           <img className="Button__icon__image" alt="icon" src={icons[iconType]} />
         </div>
         <div className="Button__label">
