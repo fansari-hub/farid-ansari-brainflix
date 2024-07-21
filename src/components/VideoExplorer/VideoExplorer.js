@@ -22,7 +22,7 @@ export default function VideoExplorer(props) {
   const refetchData = async () => {
     const response_video = await axios.get(webapi.URL + "/videos/" + videoId + webapi.KEY);
     setVideoData(response_video.data);
-  }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,6 +38,7 @@ export default function VideoExplorer(props) {
         setVideoData(response_video.data);
       }
     };
+    
     fetchData();
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [videoId]);
@@ -61,10 +62,10 @@ export default function VideoExplorer(props) {
             </article>
             <section className="VideoExplorer__cont__meta__commentInput">
               <Counter title="Comments" counter={videoData.comments.length} />
-              <CommentInput videoId={videoData.id} callback={refetchData}/>
+              <CommentInput videoId={videoData.id} callback={refetchData} />
             </section>
             <section className="VideoExplorer__cont__meta__commentList">
-              <CommentsList comments={videoData.comments} callback={refetchData} videoId = {videoData.id} />
+              <CommentsList comments={videoData.comments} callback={refetchData} videoId={videoData.id} />
             </section>
           </div>
           <section className="VideoExplorer__cont__videoList">

@@ -7,7 +7,7 @@ import UploadPage from "./pages/UploadPage";
 
 if (!localStorage.getItem("userID")){
   localStorage.setItem("userID", "001");
-  localStorage.setItem("userName" ,"Some Random User");
+  localStorage.setItem("userName" ,"Current Logged-in User");
 }
 
 

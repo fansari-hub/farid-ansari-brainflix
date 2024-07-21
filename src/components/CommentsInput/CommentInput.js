@@ -21,6 +21,7 @@ export default function CommentInput(props) {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+
     if (commentText === "") {
       formCommentInput.current.style.borderColor = "#D22D2D";
       formCommentInput.current.focus();
@@ -28,6 +29,7 @@ export default function CommentInput(props) {
     } else {
       const postURL = webapi.URL + `/videos/${videoId}/comments` + webapi.KEY;
       const response = await axios.post(postURL, { name: userName, comment: commentText });
+      
       if (response.status === 200) {
         setCommentText("");
         callback();

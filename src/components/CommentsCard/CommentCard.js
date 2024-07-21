@@ -12,7 +12,7 @@ export default function CommentCard(prop) {
     event.preventDefault();
     const delURL = webapi.URL + `/videos/${videoId}/comments/${commentId}` + webapi.KEY;
     const response = await axios.delete(delURL);
-
+    
     if (response.status === 200) {
       callback();
     } else alert("Oops, something went wrong! Comment not posted.");
@@ -31,7 +31,6 @@ export default function CommentCard(prop) {
           </div>
           <p className="CommentsCard__output__comment font-Body">{comment}</p>
         </div>
-
         <div className="CommentsCard__output__iDelete">
           <img className="Button__icon__image" alt="icon" src={iDelete} hidden={!(name === userName)} onClick={handleDeleteComment} />
         </div>

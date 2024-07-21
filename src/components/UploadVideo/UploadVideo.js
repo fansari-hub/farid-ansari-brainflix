@@ -13,9 +13,8 @@ export default function UploadVideo() {
   const navigate = useNavigate();
   const [values, setValues] = useState(initialValues);
   const formRef = useRef();
-
-  let formTitleRef = useRef();
-  let formDescriptionRef = useRef();
+  const formTitleRef = useRef();
+  const formDescriptionRef = useRef();
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
