@@ -64,7 +64,7 @@ export default function VideoExplorer(props) {
               <CommentInput videoId={videoData.id} callback={refetchData}/>
             </section>
             <section className="VideoExplorer__cont__meta__commentList">
-              <CommentsList comments={videoData.comments} />
+              <CommentsList comments={videoData.comments} callback={refetchData} videoId = {videoData.id} />
             </section>
           </div>
           <section className="VideoExplorer__cont__videoList">

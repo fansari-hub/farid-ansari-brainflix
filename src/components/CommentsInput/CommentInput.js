@@ -9,7 +9,7 @@ export default function CommentInput(props) {
   const { videoId, callback } = props;
   let formCommentInput = useRef();
   const [commentText, setCommentText] = useState("");
-  const userName = "The User";
+  const userName = localStorage.getItem("userName");
 
   const handleInputChange = (event) => {
     const commentValue = event.target.value;
