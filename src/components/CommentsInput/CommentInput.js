@@ -27,13 +27,14 @@ export default function CommentInput(props) {
       formCommentInput.current.focus();
       return;
     } else {
-      const postURL = webapi.URL + `/videos/${videoId}/comments` + webapi.KEY;
-      const response = await axios.post(postURL, { name: userName, comment: commentText });
-      
-      if (response.status === 200) {
+      try {
+        const postURL = webapi.URL + `/videos/${videoId}/comments` + webapi.KEY;
+        await axios.post(postURL, { name: userName, comment: commentText });
         setCommentText("");
         callback();
-      } else alert("Oops, something went wrong! Comment not posted.");
+      } catch (error) {
+        alert(`CommentInput.handleFormSubmit() request failed with error: ${error}`);
+      }
     }
   };
 

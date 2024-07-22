@@ -20,25 +20,40 @@ export default function VideoExplorer(props) {
   let [videoData, setVideoData] = useState(null);
 
   const refetchData = async () => {
-    const response_video = await axios.get(webapi.URL + "/videos/" + videoId + webapi.KEY);
-    setVideoData(response_video.data);
+    try {
+      const getURL = webapi.URL + "/videos/" + videoData.id + webapi.KEY;
+      const response_video = await axios.get(getURL);
+      setVideoData(response_video.data);
+    } catch (error) {
+      alert(`VideoExplorer.refetchData() request failed with error: ${error}`);
+      return -1;
+    }
   };
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(webapi.URL + "/videos" + webapi.KEY);
-      setVideoListData(response.data);
+      let response;
+      try {
+        const getURL = webapi.URL + "/videos" + webapi.KEY;
+        response = await axios.get(getURL);
+        setVideoListData(response.data);
+      } catch (error) {
+        alert(`VideoExplorer.useEffect().fetchData() request failed with error: ${error}`);
+        return -1;
+      }
 
       if (videoId === undefined) {
         setSelectedVideo(response.data[0].id);
-        const response_video = await axios.get(webapi.URL + "/videos/" + response.data[0].id + webapi.KEY);
+        const getURL = webapi.URL + "/videos/" + response.data[0].id + webapi.KEY
+        const response_video = await axios.get(getURL);
         setVideoData(response_video.data);
       } else {
-        const response_video = await axios.get(webapi.URL + "/videos/" + videoId + webapi.KEY);
+        const getURL = webapi.URL + "/videos/" + videoId + webapi.KEY;
+        const response_video = await axios.get(getURL);
         setVideoData(response_video.data);
       }
     };
-    
+
     fetchData();
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [videoId]);

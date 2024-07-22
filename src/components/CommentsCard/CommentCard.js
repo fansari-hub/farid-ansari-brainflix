@@ -11,11 +11,12 @@ export default function CommentCard(prop) {
   const handleDeleteComment = async (event) => {
     event.preventDefault();
     const delURL = webapi.URL + `/videos/${videoId}/comments/${commentId}` + webapi.KEY;
-    const response = await axios.delete(delURL);
-    
-    if (response.status === 200) {
+    try {
+      await axios.delete(delURL);
       callback();
-    } else alert("Oops, something went wrong! Comment not posted.");
+    } catch (error) {
+      alert(`CommentCard.handleDeleteComment() request failed with error: ${error}`);
+    }
   };
 
   return (
