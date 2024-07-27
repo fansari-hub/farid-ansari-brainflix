@@ -28,6 +28,12 @@
       }
       &__videoTitle {
         background-color: none;
+        text-align: left;
+        margin-top: $pad-3;
+        //margin: 0px;
+        padding-left: $pad-3;
+        padding-right: $pad-3;
+        // padding-top: $pad-mobile-before-head;
       }
       &__videoInfo {
         background-color: none;

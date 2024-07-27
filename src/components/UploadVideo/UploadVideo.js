@@ -49,7 +49,7 @@ export default function UploadVideo() {
 
   return (
     <>
-    <h1 className="font-PageHeader">
+    <h1 className="UploadVideo__title font-PageHeader">
       Upload Video
     </h1>
       <hr className="UploadVideo__ruler" />

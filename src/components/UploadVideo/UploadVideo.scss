@@ -26,13 +26,12 @@
   &__fieldgroup {
     display: flex;
     flex-direction: column;
-    @include displayTablet{
+    @include displayTablet {
       width: 100%;
     }
-    @include displayDesktop{
+    @include displayDesktop {
       width: toRem(650);
     }
-    
   }
   &__container {
     background-color: none;
@@ -54,10 +53,10 @@
       padding: 0px;
       margin: 0px;
       padding-top: $pad-3;
-      @include displayTablet{
+      @include displayTablet {
         padding-top: $pad-2;
       }
-      @include displayDesktop{
+      @include displayDesktop {
         padding-top: $pad-3;
       }
     }
@@ -106,7 +105,6 @@
     flex-direction: column;
     gap: $pad-4;
 
-    
     @include displayTablet {
       flex-direction: row;
       flex-grow: 1;
@@ -117,7 +115,7 @@
       flex-direction: row;
       flex-grow: 1;
       justify-content: flex-end;
-      gap: 0px
+      gap: 0px;
     }
     &__button {
       margin-top: $pad-3;
@@ -165,6 +163,17 @@
       margin-top: $pad-4;
       width: 100%;
       display: block;
+    }
+  }
+  &__title {
+    margin-top: $pad-3;
+    @include displayTablet {
+      margin-top: $pad-5;
+      margin-bottom: $pad-4;
+    }
+    @include displayDesktop {
+      margin-top: $pad-5;
+      margin-bottom: $pad-4;
     }
   }
 }

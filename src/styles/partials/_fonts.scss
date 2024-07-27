@@ -33,6 +33,7 @@
   line-height: toRem(32);
   font-family: "Avenir";
   font-weight: 700;
+  margin: 0px;
   color: $colPrimary-Black;
   @include displayTablet{
     font-size: toRem(33);
