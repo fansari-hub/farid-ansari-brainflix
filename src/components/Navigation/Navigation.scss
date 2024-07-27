@@ -12,6 +12,7 @@
   column-gap: $pad-3;
   &__logo {
     background-color: none;
+    text-align: center;
     width: 100%;
     @include displayTablet {
       width: auto;
@@ -38,6 +39,9 @@
   }
   &__avatar {
     background-color: none;
+    @include displayTablet{
+      margin-right: $pad-3;
+    }
     @include displayDesktop{
       margin-right: 130px;
     }
@@ -47,7 +51,7 @@
     order: 9;
     @include displayTablet {
       width: auto;
-      margin-right: $pad-7;
+      margin-right: $pad-2;
       order: unset;
     }
     @include displayDesktop {

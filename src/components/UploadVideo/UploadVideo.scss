@@ -4,12 +4,12 @@
 @use "../../styles/partials/functions" as *;
 
 .UploadVideo {
-  margin-left: $pad-3;
-  margin-right: $pad-3;
+  margin-left: 0px;
+  margin-right: 0px;
   margin-top: $pad-3;
   display: flex;
   background-color: none;
-  gap: $pad-3;
+  gap: $pad-1;
   flex-grow: 1;
   flex-direction: column;
   background-color: none;
@@ -20,17 +20,17 @@
   @include displayDesktop {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: $pad-4;
+    gap: $pad-1;
+    background-color: none;
   }
   &__fieldgroup {
     display: flex;
     flex-direction: column;
     @include displayTablet{
       width: 100%;
-
     }
     @include displayDesktop{
-      width: toRem(900);
+      width: toRem(650);
     }
     
   }
@@ -53,7 +53,13 @@
     &__title {
       padding: 0px;
       margin: 0px;
-      background-color: none;
+      padding-top: $pad-3;
+      @include displayTablet{
+        padding-top: $pad-2;
+      }
+      @include displayDesktop{
+        padding-top: $pad-3;
+      }
     }
     &__field {
       @include fieldStates;
@@ -98,18 +104,20 @@
   &__buttonsContainer {
     display: flex;
     flex-direction: column;
-    background-color: none;
+    gap: $pad-4;
+
     
     @include displayTablet {
       flex-direction: row;
       flex-grow: 1;
       justify-content: flex-end;
+      gap: 0px;
     }
     @include displayDesktop {
       flex-direction: row;
       flex-grow: 1;
       justify-content: flex-end;
-      //justify-content: flex-end;
+      gap: 0px
     }
     &__button {
       margin-top: $pad-3;
@@ -149,7 +157,7 @@
   &__ruler {
     display: none;
     @include displayTablet {
-      margin-top: $pad-4;
+      margin-top: 0px;
       width: 100%;
       display: block;
     }

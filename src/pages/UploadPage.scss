@@ -1,17 +1,21 @@
 @use "../styles/partials/mixins" as *;
 @use "../styles/partials/functions" as *;
+@use "../styles/partials/variables" as *;
 
 
 .UploadPage {
-  text-align: center;
-  margin: auto;
-
-  @include displayDesktop {
-    background-color: none;
-    max-width: toRem(1280);
-  }
   &__mainContent{
-    background-color: none;
     margin-top: 0px;
+    margin-left: $pad-4;
+    margin-right: $pad-4;
+    @include displayDesktop{
+      max-width: toRem(1000);
+      margin-left: auto;
+      margin-right: auto;
+    }
+      @include displayTablet{
+        margin-left: $pad-6;
+        margin-right: $pad-6;
+    }
   }
 }

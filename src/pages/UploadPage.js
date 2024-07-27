@@ -1,7 +1,6 @@
 import "./UploadPage.scss";
 
 import Navigation from "../components/Navigation/Navigation";
-import GenericTitle from "../components/GenericTitle/GenericTitle";
 import UploadVideo from "../components/UploadVideo/UploadVideo";
 
 export default function UploadPage() {
@@ -10,9 +9,8 @@ export default function UploadPage() {
       <nav className="UploadPage__navigation">
         <Navigation />
       </nav>
+      <hr/>
       <main className="UploadPage__mainContent">
-        <hr/>
-        <GenericTitle title="Upload Video"/>
         <UploadVideo/>
       </main>
     </div>

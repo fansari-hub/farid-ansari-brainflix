@@ -49,6 +49,9 @@ export default function UploadVideo() {
 
   return (
     <>
+    <h1 className="font-PageHeader">
+      Upload Video
+    </h1>
       <hr className="UploadVideo__ruler" />
       <form className="UploadVideo" onSubmit={handleFormSubmit} ref={formRef}>
         <div className="UploadVideo__container">
