@@ -2,8 +2,7 @@ import "./CommentsList.scss";
 import utils from "../../utils/utils.js";
 import CommentCard from "../CommentsCard/CommentCard.js";
 
-export default function CommentsList(props) {
-  const { comments, videoId, callback } = props;
+export default function CommentsList({ comments, videoId, callback }) {
   const commentsReversed = [...comments];
   commentsReversed.reverse();
 

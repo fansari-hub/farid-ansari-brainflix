@@ -4,8 +4,7 @@ import webapi from "../../utils/webapi.js";
 import axios from "axios";
 import iDelete from "../../assets/Icons/icon-delete.svg";
 
-export default function CommentCard(prop) {
-  const { name, timestamp, comment, callback, commentId, videoId } = prop;
+export default function CommentCard({ name, timestamp, comment, callback, commentId, videoId }) {
   const userName = localStorage.getItem("userName");
 
   const handleDeleteComment = async (event) => {

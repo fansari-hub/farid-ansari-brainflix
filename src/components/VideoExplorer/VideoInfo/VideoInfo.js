@@ -3,8 +3,7 @@ import utils from "../../../utils/utils.js";
 import iLikes from "../../../assets/Icons/likes.svg";
 import iViews from "../../../assets/Icons/views.svg";
 
-export default function VideoInfo(prop) {
-  const { author, videoDate, views, likes } = prop;
+export default function VideoInfo({ author, videoDate, views, likes }) {
   return (
     <div className="VideoInfo">
       <hr className="VideoInfo__ruler--tablet" />
@@ -29,7 +28,7 @@ export default function VideoInfo(prop) {
           </div>
         </div>
       </div>
-      <hr className="VideoInfo__ruler"/>
+      <hr className="VideoInfo__ruler" />
     </div>
   );
 }

@@ -5,8 +5,7 @@ import { useRef, useState } from "react";
 import webapi from "../../utils/webapi";
 import axios from "axios";
 
-export default function CommentInput(props) {
-  const { videoId, callback } = props;
+export default function CommentInput({ videoId, callback }) {
   let formCommentInput = useRef();
   const [commentText, setCommentText] = useState("");
   const userName = localStorage.getItem("userName");

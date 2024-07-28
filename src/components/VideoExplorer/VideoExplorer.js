@@ -11,9 +11,7 @@ import { useState, useEffect } from "react";
 import webapi from "../../utils/webapi.js";
 import axios from "axios";
 
-export default function VideoExplorer(props) {
-  const { videoId } = props;
-
+export default function VideoExplorer({ videoId }) {
   let [selectedVideo, setSelectedVideo] = useState(null);
   let [videoListData, setVideoListData] = useState([]);
   let [videoData, setVideoData] = useState(null);
@@ -43,7 +41,7 @@ export default function VideoExplorer(props) {
 
       if (videoId === undefined) {
         setSelectedVideo(response.data[0].id);
-        const getURL = webapi.URL + "/videos/" + response.data[0].id + webapi.KEY
+        const getURL = webapi.URL + "/videos/" + response.data[0].id + webapi.KEY;
         const response_video = await axios.get(getURL);
         setVideoData(response_video.data);
       } else {
