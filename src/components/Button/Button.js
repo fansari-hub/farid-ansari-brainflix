@@ -7,14 +7,6 @@ const icons = [iComment, iUpload, iPublish];
 
 export default function Button(prop) {
   const { label, iconType, buttonType, disabled } = prop;
-  let buttonClass = ""
-
-  if (disabled===true){
-    buttonClass="Button Button--disabled"
-  } else{
-    buttonClass="Button"
-  }
-
 
   if (iconType === undefined) {
     return (
@@ -29,7 +21,7 @@ export default function Button(prop) {
     );
   } else {
     return (
-      <button className={buttonClass} type={buttonType} disabled={disabled}>
+      <button className="Button" type={buttonType} disabled={disabled}>
         <div className="Button__icon" >
           <img className="Button__icon__image" alt="icon" src={icons[iconType]} />
         </div>

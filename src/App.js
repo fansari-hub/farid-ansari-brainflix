@@ -3,11 +3,13 @@ import "./App.scss";
 
 import HomePage from "./pages/HomePage";
 import UploadPage from "./pages/UploadPage";
+const defaultUserID = "001";
+const defaultUserName = "Current Active User";
 
 
 if (!localStorage.getItem("userID")){
-  localStorage.setItem("userID", "001");
-  localStorage.setItem("userName" ,"Current Logged-in User");
+  localStorage.setItem("userID", defaultUserID);
+  localStorage.setItem("userName" , defaultUserName);
 }
 
 

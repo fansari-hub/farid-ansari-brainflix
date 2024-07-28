@@ -8,7 +8,6 @@
   margin-right: $pad-2;
   background-color: none;
   @include displayTablet {
-    //margin-right: $pad-9;
     max-width: toRem(330);
   }
   @include displayDesktop {

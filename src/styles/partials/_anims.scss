@@ -47,12 +47,10 @@
 @keyframes reveal-side {
   from {
     opacity: 0;
-    //clip-path: inset(50% 10% 50% 10%);
     transform: translate(-75%, 0px);
   }
   to {
     opacity: 1;
-    //clip-path: inset(0% 0% 0% 0%);
     transform: translate(0px, 0px);
   }
 }
@@ -60,12 +58,10 @@
 @keyframes reveal-up {
   from {
     opacity: 0;
-    //clip-path: inset(50% 10% 50% 10%);
     transform: translate(0px, 30%);
   }
   to {
     opacity: 1;
-    //clip-path: inset(0% 0% 0% 0%);
     transform: translate(0px, 0px);
   }
 }

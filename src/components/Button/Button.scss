@@ -24,15 +24,17 @@
     padding-left: $pad-2;
     padding-right: $pad-2;
   }
-  &--disabled{
-    background-color: $colPrimary-Silver;
-  }
   &:hover {
     cursor: pointer;
     background-color: $colSecondary-DarkBlue;
-    // animation: buttonHover;
-    // animation-duration: 0.25s;
-    // animation-fill-mode: forwards;
+    animation: buttonHover;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+  }
+  &:disabled{
+    cursor: default;
+    background-color: $colPrimary-Silver;
+    animation: none;
   }
   &__icon {
     padding-top: 5px;
@@ -60,6 +62,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover{
+    cursor: pointer;
+  }
   @include displayTablet {
     width: auto;
     min-width: toRem(150);
