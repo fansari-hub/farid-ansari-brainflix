@@ -3,6 +3,8 @@ import videoThumb from "../../assets/Images/Upload-video-preview.jpg";
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useRef } from "react";
 import "./UploadVideo.scss";
+import webapi from "../../utils/webapi";
+import axios from "axios";
 
 const initialValues = {
   videoTitle: "",
@@ -15,11 +17,18 @@ export default function UploadVideo() {
   const formRef = useRef();
   const formTitleRef = useRef();
   const formDescriptionRef = useRef();
+  const userName = localStorage.getItem("userName");
 
-  const handleFormSubmit = (event) => {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
-    alert("Your video titled " + values.videoTitle + " is now uploading in the background.");
-    navigate("/");
+      try {
+        const postURL = webapi.URL + `/videos` + webapi.KEY;
+        await axios.post(postURL, { "title": values.videoTitle, "description": values.videoDescription, "imageName": "Upload-video-preview.jpg", "userName": userName});
+        alert("Your video titled " + values.videoTitle + " is now uploading in the background.");
+        navigate("/");
+      } catch (error) {
+        alert(`UploadVideo.handleFormSubmit() request failed with error: ${error}`);
+      }
   };
 
   const handleInputChange = (event) => {
