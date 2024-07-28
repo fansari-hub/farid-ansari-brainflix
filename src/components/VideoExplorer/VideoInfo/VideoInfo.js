@@ -11,7 +11,8 @@ import { useEffect, useState } from "react";
 export default function VideoInfo({ author, videoDate, views, likes, videoId }) {
   const [liked, setLiked] = useState(false);
   const [currentlikeIcon, setcurrentlikeIcon] = useState(iLikes);
-  const [newLikes, setNewLikes] = useState(likes);
+  const [newLikes, setNewLikes] = useState();
+  
 
   const handleLikedClick = async (event) => {
     if (liked){
@@ -21,17 +22,19 @@ export default function VideoInfo({ author, videoDate, views, likes, videoId }) 
       const postURL = webapi.URL + `/videos/${videoId}/likes` + webapi.KEY;
       await axios.put(postURL);
       setLiked(true);
-      // setNewLikes(newLikes + 1);
+      setNewLikes(likes + 1);
       setcurrentlikeIcon(iLikesActive);
     } catch (error) {
       alert(`UploadVideo.handleFormSubmit() request failed with error: ${error}`);
     }
   }
 
-  // useEffect(() => {
-  //   setNewLikes(() => {return newLikes});
-  // },[])
-
+  
+  useEffect(() => {
+    setNewLikes(likes);
+    setcurrentlikeIcon(iLikes);
+    setLiked(false);
+  },[videoId])
 
   return (
     <div className="VideoInfo">
@@ -52,7 +55,7 @@ export default function VideoInfo({ author, videoDate, views, likes, videoId }) 
           </div>
           <div className="VideoInfo__details__col__group">
             <img className="VideoInfo__details__col__group__icon VideoInfo__details__col__group__icon--likes" src={currentlikeIcon} alt="likes" onClick={handleLikedClick} />
-            <p className="VideoInfo__details__col__group__item font-Body font-Faded">{likes}</p>
+            <p className="VideoInfo__details__col__group__item font-Body font-Faded">{newLikes}</p>
           </div>
         </div>
       </div>
