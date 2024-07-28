@@ -49,6 +49,9 @@
         &__icon {
           height: toRem(16);
           align-self: center;
+          &--likes {
+            cursor: pointer;
+          }
         }
         &__item {
           text-align: left;

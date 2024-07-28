@@ -67,7 +67,7 @@ export default function VideoExplorer({ videoId }) {
               <h1 className="font-PageHeader">{videoData.title}</h1>
             </div>
             <section className="VideoExplorer__cont__meta__videoInfo">
-              <VideoInfo author={videoData.channel} views={videoData.views} videoDate={videoData.timestamp} likes={videoData.likes} />
+              <VideoInfo author={videoData.channel} views={videoData.views} videoDate={videoData.timestamp} likes={videoData.likes} videoId={videoData.id} />
             </section>
             <article className="VideoExplorer__cont__meta__textBlock">
               <TextBlock text={videoData.description} />

@@ -5,8 +5,7 @@ import iPublish from "../../assets/Icons/publish.svg";
 
 const icons = [iComment, iUpload, iPublish];
 
-export default function Button(prop) {
-  const { label, iconType, buttonType, disabled } = prop;
+export default function Button({ label, iconType, buttonType, disabled }) {
 
   if (iconType === undefined) {
     return (

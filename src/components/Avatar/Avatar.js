@@ -1,8 +1,7 @@
 import avatar from '../../assets/Images/Mohan-muruge.jpg'
 import './Avatar.scss'
 
-export default function Avatar(props){
-    let {image, useDefault} = props;
+export default function Avatar({image, useDefault}){
 
     return(
         <div className="Avatar">
