@@ -29,7 +29,8 @@ export default function VideoInfo({ author, videoDate, views, likes, videoId }) 
     }
   }
 
-  
+  // This effect refreshes the number of likes and reset the likes icon 
+  // when the parent component changes selected video.
   useEffect(() => {
     setNewLikes(likes);
     setcurrentlikeIcon(iLikes);
