@@ -59,7 +59,7 @@ export default function VideoExplorer({ videoId }) {
     return (
       <div className="VideoExplorer">
         <div className="VideoExplorer__videoPlayer">
-          <VideoPlayer image={videoData.image} />
+          <VideoPlayer image={videoData.image} videoURL={videoData.video} />
         </div>
         <div className="VideoExplorer__cont">
           <div className="VideoExplorer__cont__meta">
