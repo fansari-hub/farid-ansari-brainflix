@@ -26,6 +26,7 @@
   &__fieldgroup {
     display: flex;
     flex-direction: column;
+    
     @include displayTablet {
       width: 100%;
     }
@@ -39,6 +40,14 @@
     text-align: left;
     display: flex;
     flex-direction: column;
+    @include displayDesktop {
+      flex-grow: 0;
+      padding-left : $pad-3
+    }
+    &__imgButton {
+      align-self: center;
+      padding-top: $pad-3;
+    }
     &__preview {
       background-color: none;
       width: 100%;
