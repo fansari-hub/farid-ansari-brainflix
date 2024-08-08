@@ -52,11 +52,11 @@ export default function VideoInfo({ author, videoDate, views, likes, videoId }) 
         <div className="VideoInfo__details__col">
           <div className="VideoInfo__details__col__group">
             <img className="VideoInfo__details__col__group__icon" src={iViews} alt="views"/>
-            <p className="VideoInfo__details__col__group__item font-Body font-Faded">{views}</p>
+            <p className="VideoInfo__details__col__group__item font-Body font-Faded">{(views+0).toLocaleString()}</p>
           </div>
           <div className="VideoInfo__details__col__group">
             <img className="VideoInfo__details__col__group__icon VideoInfo__details__col__group__icon--likes" src={currentlikeIcon} alt="likes" onClick={handleLikedClick} />
-            <p className="VideoInfo__details__col__group__item font-Body font-Faded">{newLikes}</p>
+            <p className="VideoInfo__details__col__group__item font-Body font-Faded">{(newLikes+0).toLocaleString()}</p>
           </div>
         </div>
       </div>
