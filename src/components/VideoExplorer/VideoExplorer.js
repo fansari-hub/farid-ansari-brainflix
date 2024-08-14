@@ -12,7 +12,6 @@ import webapi from "../../utils/webapi.js";
 import axios from "axios";
 
 export default function VideoExplorer({ videoId }) {
-  let [selectedVideo, setSelectedVideo] = useState(null);
   let [videoListData, setVideoListData] = useState([]);
   let [videoData, setVideoData] = useState(null);
 
@@ -40,7 +39,6 @@ export default function VideoExplorer({ videoId }) {
       }
 
       if (videoId === undefined) {
-        setSelectedVideo(response.data[0].id);
         const getURL = webapi.URL + "/videos/" + response.data[0].id + webapi.KEY;
         const response_video = await axios.get(getURL);
         setVideoData(response_video.data);
@@ -81,7 +79,7 @@ export default function VideoExplorer({ videoId }) {
             </section>
           </div>
           <section className="VideoExplorer__cont__videoList">
-            <VideoList list={videoListData} selected={selectedVideo} />
+            <VideoList list={videoListData} selected={videoData.id} />
           </section>
         </div>
       </div>

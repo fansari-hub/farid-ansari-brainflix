@@ -8,7 +8,7 @@ export default function VideoList({ list, selected }) {
         <p className="font-Label font-Faded">NEXT VIDEOS</p>
       <div>
         {list
-          .filter((e, i) => i !== selected)
+          .filter((e) => e.id !== selected)
           .map((i) => (
             <VideoListCard videoItem={i} key={i.id} />
           ))}
