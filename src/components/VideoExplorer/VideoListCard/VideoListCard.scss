@@ -35,7 +35,7 @@
   &__details {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     text-align: left;
     padding-left: $pad-3;
     padding-right: $pad-3;

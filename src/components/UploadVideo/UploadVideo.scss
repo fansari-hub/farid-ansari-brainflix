@@ -45,8 +45,9 @@
       padding-left : $pad-3
     }
     &__imgButton {
-      align-self: center;
+      align-self: left;
       padding-top: $pad-3;
+      padding-left: $pad-2;
     }
     &__preview {
       background-color: none;
