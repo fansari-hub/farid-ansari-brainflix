@@ -65,9 +65,6 @@ const utils = {
           // get plural time unit name
           prettyTime += val + " " + lookup.plural[i];
         }
-        // console.log(lookup.singular[i] + ":" + lookup.values[i]);
-        // console.log(lookup.singular[i+1] + ":" + lookup.values[i+1]);
-        // console.log('--------------');
         // This block allows the appending of the next lower time unit if relevant conditions are met by allowing the loop to contine one more time
         if (lookup.values[i] - Math.floor(lookup.values[i]) > 0 //check to see if there are any time remainders
             && Math.floor(lookup.values[i + 1] > 0)  //check to see if next lower unit has any time 
